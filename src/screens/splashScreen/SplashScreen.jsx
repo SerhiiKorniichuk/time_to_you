@@ -2,18 +2,18 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import { Link } from 'react-router-native'
 
-const Login = () => {
+const SplashScreen = () => {
     return (
         <View>
-            <Text>Login</Text>
+            <Text>SplashScreen</Text>
+            <Link to="/login">
+                <Text>Login</Text>
+            </Link>
             <Link to="/signup">
                 <Text>SignUp</Text>
-            </Link>
-            <Link to="/">
-                <Text>splashScreen</Text>
             </Link>
         </View>
     )
 }
 
-export default Login;
+export default SplashScreen;

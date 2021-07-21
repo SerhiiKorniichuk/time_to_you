@@ -6,8 +6,11 @@ const SignUp = () => {
     return (
         <View>
             <Text>SignUp</Text>
-            <Link to="/">
+            <Link to="/login">
                 <Text>Login</Text>
+            </Link>
+            <Link to="/">
+                <Text>splashScreen</Text>
             </Link>
         </View>
     )
