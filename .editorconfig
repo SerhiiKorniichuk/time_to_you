@@ -1,3 +1,7 @@
 # Windows files
 [*.bat]
 end_of_line = crlf
+
+[{*.js,*.jsx}]
+indent_style = tab
+indent_size = 4
