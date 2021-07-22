@@ -1,13 +1,14 @@
 import React from 'react'
-import { SafeAreaView, View, Text, ImageBackground } from 'react-native'
+import { SafeAreaView, View, Text, ImageBackground, Image } from 'react-native'
 import { Link } from 'react-router-native'
 import { styles } from './styles'
 
-// const bg = { uri: '../../assets/images/SplashScreen/bg.svg' }
-const bg = require('../../assets/images/SplashScreen/bg.svg')
+const bg = require('../../assets/images/SplashScreen/bg.png')
+const leftImage = require('../../assets/images/SplashScreen/leftImage.png')
+const rightImage = require('../../assets/images/SplashScreen/rightImage.png')
+const timeToU = require('../../assets/images/SplashScreen/timeToU.png')
 
 const SplashScreen = () => {
-	console.log(bg)
 	return (
 		<SafeAreaView>
 			<ImageBackground
@@ -16,7 +17,9 @@ const SplashScreen = () => {
 				style={styles.container}
 			>
 				<View style={styles.topContainer}>
-					<Text>SplashScreen</Text>
+					<Image source={leftImage} style={styles.leftImage} />
+					<Image source={rightImage} style={styles.rightImage} />
+					<Image source={timeToU} />
 				</View>
 				<View style={styles.bottomContainer}>
 					<Link to='/login'>

@@ -5,8 +5,14 @@ export const styles = StyleSheet.create({
 		height: '100%',
 		justifyContent: 'space-between',
 	},
-	image: {
-		flex: 1,
-		justifyContent: 'center',
+	leftImage: {
+		position: 'absolute',
+		left: 0,
+		top: 54,
+	},
+	rightImage: {
+		position: 'absolute',
+		right: 0,
+		top: 148,
 	},
 })
