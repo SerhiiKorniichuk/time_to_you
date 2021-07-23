@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, ImageBackground } from 'react-native'
 import { Link } from 'react-router-native'
 import { SignUpChooseType } from './SignUpChooseType/SignUpChooseType'
+import { SignUpClientForm } from './SignUpClientForm/SignUpClientForm'
 import { styles } from './stylesSignUp'
 
 
@@ -14,7 +15,8 @@ const SignUp = () => {
 				resizeMode='cover'
 			>
 				<View style={styles.block}>
-					<SignUpChooseType/>
+					{/*<SignUpChooseType/>*/}
+					<SignUpClientForm/>
 					<View style={styles.additionBlock}>
 						<Text style={styles.additionText}>Already have an account?</Text>
 						<Link to='/login'>
