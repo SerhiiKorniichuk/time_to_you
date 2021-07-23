@@ -1,6 +1,7 @@
-import { StyleSheet, Dimensions } from 'react-native'
+import { StyleSheet } from 'react-native'
+import { layout } from '../../helpers/responseLayout'
 
-const { width: w, height: h } = Dimensions.get('window')
+const btnFont = layout.font([16, 24, '500', 'normal', 'Poppins'])
 
 export const styles = StyleSheet.create({
 	container: {
@@ -14,10 +15,10 @@ export const styles = StyleSheet.create({
 		flex: 3,
 	},
 	leftImageBox: {
-		width: 0.39 * w,
-		height: 0.27 * h,
+		width: layout.scaledWidth(147),
+		height: layout.scaledHeight(194),
 		left: 0,
-		top: 0.07 * h,
+		top: layout.scaledHeight(54),
 		position: 'absolute',
 	},
 	leftImage: {
@@ -26,10 +27,10 @@ export const styles = StyleSheet.create({
 		height: '100%',
 	},
 	rightImageBox: {
-		width: 0.54 * w,
-		height: 0.38 * h,
+		width: layout.scaledWidth(202),
+		height: layout.scaledHeight(285),
 		right: 0,
-		top: 0.18 * h,
+		top: layout.scaledHeight(149),
 		position: 'absolute',
 	},
 	rightImage: {
@@ -38,11 +39,11 @@ export const styles = StyleSheet.create({
 		resizeMode: 'contain',
 	},
 	logoBox: {
-		width: 0.56 * w,
-		height: 0.2 * h,
+		width: layout.scaledWidth(210),
+		height: layout.scaledHeight(145),
 		position: 'absolute',
-		left: 0.1 * w,
-		top: 0.507 * h,
+		left: layout.scaledWidth(38),
+		top: layout.scaledHeight(397),
 	},
 	logo: {
 		resizeMode: 'contain',
@@ -50,23 +51,19 @@ export const styles = StyleSheet.create({
 		height: '100%',
 	},
 	logoTextBlock: {
-		marginTop: 0.0127 * h,
+		marginTop: layout.scaledHeight(10),
 		flexDirection: 'row',
 		alignItems: 'center',
 	},
 	logoTextLine: {
 		flex: 1,
 		height: 1,
-		width: 52,
+		width: layout.scaledWidth(52),
 		backgroundColor: '#8E8E8E',
 		marginRight: 8,
 	},
 	logoText: {
-		fontFamily: 'Questrial',
-		fontStyle: 'normal',
-		fontWeight: 'normal',
-		fontSize: 0.023 * h,
-		lineHeight: 0.024 * h,
+		...layout.font([18, 19, 'normal', 'normal', 'Questrial']),
 		color: '#8E8E8E',
 	},
 	bottomContainer: {
@@ -75,31 +72,23 @@ export const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	button: {
-		height: 0.067 * h,
-		width: 0.826 * w,
+		height: layout.scaledHeight(55),
+		width: layout.scaledWidth(310),
 		backgroundColor: '#FF9677',
 		borderRadius: 50,
-		marginVertical: 8,
+		marginVertical: layout.scaledHeight(8),
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
 	orangeBtnTxt: {
-		fontFamily: 'Poppins',
-		fontStyle: 'normal',
-		fontWeight: '500',
-		fontSize: 16,
-		lineHeight: 24,
+		...btnFont,
 		color: '#FFFFFF',
 	},
 	whiteButton: {
 		backgroundColor: '#fff',
 	},
 	whiteBtnTxt: {
-		fontFamily: 'Poppins',
-		fontStyle: 'normal',
-		fontWeight: '500',
-		fontSize: 16,
-		lineHeight: 24,
+		...btnFont,
 		color: '#FE6F61',
 	},
 })
