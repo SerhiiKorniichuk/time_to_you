@@ -57,7 +57,7 @@ export const MainButton = (props) => {
 
 MainButton.propTypes = {
 	style: PropTypes.object,
-	type: PropTypes.string,
+	type: PropTypes.oneOf(['primary', 'outline']),
 	text: PropTypes.string,
 	link: PropTypes.string,
 	onPress: PropTypes.func
