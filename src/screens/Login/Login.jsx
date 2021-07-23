@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView, View, Text, ImageBackground } from 'react-native'
 import { useFormik } from 'formik'
 import { styles } from './stylesLogin'

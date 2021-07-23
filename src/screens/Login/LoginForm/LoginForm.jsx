@@ -3,6 +3,7 @@ import { TextInput, View } from 'react-native'
 import { useFormik } from 'formik'
 import { styles } from './stylesLoginForm'
 import { MainButton } from '../../../components/Buttons/MainButton/MainButton'
+import { Input } from '../../../components/Input/Input'
 
 const Login = () => {
 	const formik = useFormik({
@@ -16,13 +17,18 @@ const Login = () => {
 
 	return (
 		<>
-			<View>
-				<TextInput
-					onChangeText={handleChange('phone')}
-					onBlur={handleBlur('phone')}
-					value={values.phone}
-				/>
-			</View>
+			<Input
+				label={'Phone number'}
+				type={'text'}
+				value={values.phone}
+				onChange={handleChange('phone')}
+			/>
+			<Input
+				label={'Password'}
+				type={'password'}
+				value={values.phone}
+				onChange={handleChange('phone')}
+			/>
 		</>
 	)
 }

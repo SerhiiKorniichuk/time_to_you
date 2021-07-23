@@ -14,6 +14,7 @@ export const styles = StyleSheet.create({
 		backgroundColor: '#FBF9F9',
 		borderTopLeftRadius: 20,
 		borderTopRightRadius: 20,
+		alignItems: 'center',
 	},
 	headerContainer: {
 		paddingTop: layout.scaledHeight(43),
