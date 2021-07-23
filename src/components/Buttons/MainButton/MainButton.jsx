@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Text, TouchableOpacity } from 'react-native'
+import PropTypes from 'prop-types'
+import { Text, TouchableWithoutFeedback, View } from 'react-native'
 import { Link } from 'react-router-native'
 import { stylesMainButton } from './stylesMainButton'
 
@@ -28,16 +29,36 @@ export const MainButton = (props) => {
 		}
 	}
 
+	const getInnerText = () => {
+		return (
+			<View style={[stylesMainButton.body, bodyStyle, props.style]}>
+				<Text style={[stylesMainButton.text, textStyle]}>{props.text}</Text>
+			</View>
+		)
+	}
+
 	const onPress = () => props.onPress()
 
+	if (props.link) {
+		return (
+			<Link to={props.link} underlayColor='none'>
+				{getInnerText()}
+			</Link>
+		)
+	}
+
 	return (
-		<Link to={props.link}>
-			<TouchableOpacity
-				onPress={onPress}
-				style={[stylesMainButton.body, bodyStyle, props.style]}
-			>
-					<Text style={[stylesMainButton.text, textStyle]}>{props.text}</Text>
-			</TouchableOpacity>
-		</Link>
+		<TouchableWithoutFeedback onPress={onPress}>
+			{getInnerText()}
+		</TouchableWithoutFeedback >
 	)
+}
+
+
+MainButton.propTypes = {
+	style: PropTypes.object,
+	type: PropTypes.string,
+	text: PropTypes.string,
+	link: PropTypes.string,
+	onPress: PropTypes.func
 }
