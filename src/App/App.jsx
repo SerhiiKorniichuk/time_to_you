@@ -1,9 +1,9 @@
 import React from 'react'
 import { View } from 'react-native'
 import { NativeRouter } from 'react-router-native'
-import GuestRoutes from '../routes/guestRoutes/GuestRoutes'
-import PrivateRoutes from '../routes/privateRoutes/PrivateRoutes'
-import { styles } from './styles'
+import GuestRoutes from '../routes/GuestRoutes/GuestRoutes'
+import PrivateRoutes from '../routes/PrivateRoutes/PrivateRoutes'
+import { styles } from './stylesApp'
 
 
 const App = () => {
