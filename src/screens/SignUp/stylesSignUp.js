@@ -1,7 +1,7 @@
-import { StyleSheet } from 'react-native'
+import { ScaledSheet } from 'react-native-size-matters'
 
 
-export const styles = StyleSheet.create({
+export const styles = ScaledSheet.create({
 	container: {
 		flex: 1
 	},
@@ -10,9 +10,9 @@ export const styles = StyleSheet.create({
 		justifyContent: 'flex-end'
 	},
 	block: {
-		padding: 32,
+		paddingVertical: '32@vs',
+		paddingHorizontal: '28@vs',
 		height: '83%',
-		alignItems: 'center',
 		borderRadius: 20,
 		backgroundColor: '#FBF9F9',
 		overflow: 'hidden'

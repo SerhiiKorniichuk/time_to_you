@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Alert, Text, TouchableWithoutFeedback, View } from 'react-native'
-import { Input } from '../../../components/Input/Input'
+import { Input } from '../../../components/CustomInput/Input'
+// import { Input } from '../../../components/Input/Input'
 import { styles } from './stylesSignUpClientForm'
 
 
@@ -18,7 +19,9 @@ export const SignUpClientForm = () => {
 		<>
 			<View style={styles.headerBlock}>
 				<TouchableWithoutFeedback onPress={goPreviewsStep}>
-					<Text style={styles.headerButton}>X</Text>
+					<View style={styles.headerButton}>
+						<Text style={styles.headerButtonInner}>X</Text>
+					</View>
 				</TouchableWithoutFeedback>
 				<Text style={styles.headerTitle}>Sign up</Text>
 			</View>
