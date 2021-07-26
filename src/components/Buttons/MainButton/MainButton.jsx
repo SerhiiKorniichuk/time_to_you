@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Text, TouchableWithoutFeedback, View } from 'react-native'
 import { Link } from 'react-router-native'
-import { stylesMainButton } from './stylesMainButton'
+import { styles } from './stylesMainButton'
 
 
 export const MainButton = (props) => {
 
-	const [bodyStyle, setBodyStyle] = useState(stylesMainButton.bodyVanilla)
-	const [textStyle, setTextStyle] = useState(stylesMainButton.textVanilla)
+	const [bodyStyle, setBodyStyle] = useState(styles.bodyVanilla)
+	const [textStyle, setTextStyle] = useState(styles.textVanilla)
 
 	useEffect(() => {
 		getStyles()
@@ -17,12 +17,12 @@ export const MainButton = (props) => {
 	const getStyles = () => {
 		switch (props.type) {
 			case 'primary':
-				setBodyStyle(stylesMainButton.bodyPrimary)
-				setTextStyle(stylesMainButton.textPrimary)
+				setBodyStyle(styles.bodyPrimary)
+				setTextStyle(styles.textPrimary)
 				break
 			case 'outline':
-				setBodyStyle(stylesMainButton.bodyOutline)
-				setTextStyle(stylesMainButton.textOutline)
+				setBodyStyle(styles.bodyOutline)
+				setTextStyle(styles.textOutline)
 				break
 			default:
 				break
@@ -31,8 +31,8 @@ export const MainButton = (props) => {
 
 	const getInnerText = () => {
 		return (
-			<View style={[stylesMainButton.body, bodyStyle, props.style]}>
-				<Text style={[stylesMainButton.text, textStyle]}>{props.text}</Text>
+			<View style={[styles.body, bodyStyle, props.style]}>
+				<Text style={[styles.text, textStyle]}>{props.text}</Text>
 			</View>
 		)
 	}

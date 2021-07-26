@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native'
-import { layout } from '../../../helpers/responseLayout'
 
 
 export const styles = StyleSheet.create({
@@ -13,5 +12,13 @@ export const styles = StyleSheet.create({
 	headerTitle: {
 		fontSize: 24,
 		fontFamily: 'Prata'
+	},
+	input: {
+		marginTop: 12
+	},
+	formBlock: {
+		marginTop: 35,
+		width: '100%',
+		alignItems: 'center'
 	}
 })
