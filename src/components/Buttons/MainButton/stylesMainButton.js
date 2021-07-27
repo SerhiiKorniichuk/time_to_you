@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
 
 
-export const stylesMainButton = StyleSheet.create({
+export const styles = StyleSheet.create({
 	body: {
 		paddingTop: 12,
 		paddingBottom: 10,
