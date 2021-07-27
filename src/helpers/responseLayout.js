@@ -6,7 +6,8 @@ const window = Dimensions.get('window')
 const DESIGN_WIDTH = 375
 const DESIGN_HEIGHT = 782
 
-const fontSize = size => RFValue(size / (dpi >= 3 ? 2 : dpi), DESIGN_WIDTH)
+// const fontSize = size => RFValue(size / (dpi >= 3 ? 2 : dpi), DESIGN_WIDTH)
+const fontSize = size => RFValue(size, DESIGN_HEIGHT)
 
 const fontWeight = weight => {
 	if (weight === '500' || weight === '600' || weight === '700') {
@@ -27,8 +28,8 @@ const fontWeight = weight => {
 export const layout = {
 	...window,
 	dpi,
-	scaledWidth: size => (size * window.width) / DESIGN_WIDTH,
-	scaledHeight: size => (size * window.height) / DESIGN_HEIGHT,
+	scaledWidth: size => Math.floor((size * window.width) / DESIGN_WIDTH),
+	scaledHeight: size => Math.floor((size * window.height) / DESIGN_HEIGHT),
 	fontSize,
 	isSmallLayout: !(window.width >= DESIGN_WIDTH),
 	font: ([

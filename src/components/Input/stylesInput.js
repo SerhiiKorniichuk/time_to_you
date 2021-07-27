@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
 		width: layout.scaledWidth(289),
 		height: layout.scaledHeight(74),
 		paddingTop: layout.scaledHeight(5),
+		marginBottom: layout.scaledHeight(20),
 	},
 	input: {
 		width: '100%',
