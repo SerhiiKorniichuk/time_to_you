@@ -6,23 +6,36 @@ import { SvgComponent } from '../../assets/icons/ArrowDown'
 import { styles } from './stylesPhoneInput'
 import { styles as customInputStyles } from '../CustomInput/stylesInput'
 
-
-export const PhoneInput = (props) => {
-
+export const PhoneInput = props => {
 	const [countryCode, setCountryCode] = useState(props.countryCode)
-	const [country, setCountry] = useState({callingCode: props.callingCode})
+	const [country, setCountry] = useState({ callingCode: [props.callingCode] })
 	const [visible, setVisible] = useState(false)
+	const [phone, setPhone] = useState('')
 
-	const selectCountry = (country) => {
+	const selectCountry = country => {
 		setCountryCode(country.cca2)
 		setCountry(country)
+		props.onChange(prev => ({
+			...prev,
+			phone: country.callingCode[0] + phone,
+		}))
 	}
 
 	const toggleVisible = () => setVisible(!visible)
 
+	const handleChange = txt => {
+		props.onChange(prev => ({
+			...prev,
+			phone: country.callingCode[0] + txt,
+		}))
+		setPhone(txt)
+	}
+
 	return (
 		<View style={customInputStyles.container}>
-			{props.label && <Text style={customInputStyles.label}>{props.label}</Text>}
+			{props.label && (
+				<Text style={customInputStyles.label}>{props.label}</Text>
+			)}
 			<View style={styles.body}>
 				<TouchableWithoutFeedback onPress={toggleVisible}>
 					<View style={styles.countryPicker}>
@@ -42,25 +55,28 @@ export const PhoneInput = (props) => {
 							</Text>
 						)}
 						<View style={styles.arrow}>
-							<SvgComponent/>
+							<SvgComponent />
 						</View>
-						<View style={styles.divider}/>
+						<View style={styles.divider} />
 					</View>
 				</TouchableWithoutFeedback>
-				<TextInput style={styles.input}/>
+				<TextInput
+					style={styles.input}
+					onChangeText={handleChange}
+					value={phone}
+				/>
 			</View>
 		</View>
 	)
 }
 
-
 PhoneInput.propTypes = {
 	label: PropTypes.string,
 	countryCode: PropTypes.string,
-	callingCode: PropTypes.string
+	callingCode: PropTypes.string,
 }
 
 PhoneInput.defaultProps = {
 	countryCode: 'DK',
-	callingCode: '45'
+	callingCode: '45',
 }

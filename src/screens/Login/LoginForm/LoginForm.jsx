@@ -17,7 +17,7 @@ const Login = () => {
 		},
 		onSubmit: data => console.log(data),
 	})
-	const { values, handleChange, handleBlur, handleSubmit } = formik
+	const { values, handleChange, handleBlur, handleSubmit, setValues } = formik
 
 	const handlePress = () => console.log('click')
 
@@ -27,7 +27,7 @@ const Login = () => {
 				<PhoneInput
 					label={'Phone number'}
 					value={values.phone}
-					onChange={handleChange('phone')}
+					onChange={setValues}
 				/>
 			</View>
 			<Input
