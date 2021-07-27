@@ -11,14 +11,16 @@ export const styles = StyleSheet.create({
 	},
 	linkContainer: {
 		flex: 1,
-		alignItems: 'flex-end',
+		width: '100%',
 	},
 	linkText: {
 		...layout.font([14, 19, 'normal', 'normal', 'Poppins']),
 		color: '#FE6F61',
+		textAlign: 'right',
 	},
 	btnContainer: {
 		flex: 1,
+		width: '100%',
 	},
 	footerContainer: {
 		flex: 3,
