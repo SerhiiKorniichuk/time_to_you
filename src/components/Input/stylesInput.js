@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
 		marginVertical: layout.scaledHeight(12.5),
 		width: layout.scaledWidth(289),
 		height: layout.scaledHeight(74),
+		backgroundColor: '#666',
 	},
 	input: {
 		paddingBottom: 12,

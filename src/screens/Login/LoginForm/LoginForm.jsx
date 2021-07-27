@@ -26,13 +26,25 @@ const Login = () => {
 			<Input
 				label={'Password'}
 				type={'password'}
-				value={values.phone}
-				onChange={handleChange('phone')}
+				value={values.password}
+				onChange={handleChange('password')}
 			/>
 			<View style={styles.linkContainer}>
 				<Link to='/'>
-					<Text>Forgot password?</Text>
+					<Text style={styles.linkText}>Forgot password?</Text>
 				</Link>
+			</View>
+			<View style={styles.btnContainer}>
+				<MainButton
+					type={'primary'}
+					text={'Login'}
+					onPress={handleSubmit}
+				/>
+			</View>
+			<View style={styles.footerContainer}>
+				<View style={styles.socialMedia}>
+					<Text>Social media</Text>
+				</View>
 			</View>
 		</>
 	)

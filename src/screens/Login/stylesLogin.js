@@ -20,10 +20,11 @@ export const styles = StyleSheet.create({
 		paddingTop: layout.scaledHeight(43),
 		paddingBottom: layout.scaledHeight(32),
 		alignItems: 'center',
-		flex: 1,
+		backgroundColor: '#888',
 	},
 	formContainer: {
-		flex: 9,
+		flex: 1,
+		backgroundColor: '#777',
 	},
 	header: {
 		...layout.font([24, 33, 'normal', 'normal', 'Prata']),
