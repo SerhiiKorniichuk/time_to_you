@@ -3,11 +3,14 @@ import { layout } from '../../helpers/responseLayout'
 
 export const styles = StyleSheet.create({
 	container: {
+		marginVertical: layout.scaledHeight(12),
 		width: layout.scaledWidth(289),
 		height: layout.scaledHeight(74),
 		paddingTop: layout.scaledHeight(5),
+		marginBottom: layout.scaledHeight(20),
 	},
 	input: {
+		paddingBottom: 12,
 		width: '100%',
 		height: layout.scaledHeight(50),
 		borderRadius: 6,
@@ -20,6 +23,6 @@ export const styles = StyleSheet.create({
 	},
 	label: {
 		color: '#8E8E8E',
-		...layout.font([12, 12, 'normal', 'normal', 'Poppins']),
+		...layout.font([12, 18, 'normal', 'normal', 'Poppins']),
 	},
 })
