@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Alert, Text, TouchableWithoutFeedback, View } from 'react-native'
 import { Input } from '../../../components/CustomInput/Input'
+import { PhoneInput } from '../../../components/PhoneInput/PhoneInput'
 // import { Input } from '../../../components/Input/Input'
 import { styles } from './stylesSignUpClientForm'
 
@@ -37,10 +38,15 @@ export const SignUpClientForm = () => {
 					onChange={setLastName}
 				/>
 				<Input
-					label='Password'
+					label='Create password'
 					value={password}
 					type='password'
 					onChange={setPassword}
+				/>
+				<PhoneInput
+					label='Phone number'
+					countryCode='DK'
+					callingCode='45'
 				/>
 			</View>
 		</>

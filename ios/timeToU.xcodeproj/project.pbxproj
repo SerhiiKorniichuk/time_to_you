@@ -24,6 +24,7 @@
 		B47E09AFE2B64E819EB18A1A /* leftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C324FBFCB44CD3998553E4 /* leftImage.png */; };
 		6F35CFAFD2734B2EAB951C95 /* rightImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E43605C008C42079C5DAEC9 /* rightImage.png */; };
 		C7503C6313544E77B9A940AB /* timeToU.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B9254E0F77422C89B6B09B /* timeToU.png */; };
+		FE5FEE70FD7E4887B5260104 /* WorkSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76576543D67A47A0832DA8CC /* WorkSans.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		B7C324FBFCB44CD3998553E4 /* leftImage.png */ = {isa = PBXFileReference; name = "leftImage.png"; path = "../src/assets/images/SplashScreen/leftImage.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		2E43605C008C42079C5DAEC9 /* rightImage.png */ = {isa = PBXFileReference; name = "rightImage.png"; path = "../src/assets/images/SplashScreen/rightImage.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		88B9254E0F77422C89B6B09B /* timeToU.png */ = {isa = PBXFileReference; name = "timeToU.png"; path = "../src/assets/images/SplashScreen/timeToU.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		76576543D67A47A0832DA8CC /* WorkSans.ttf */ = {isa = PBXFileReference; name = "WorkSans.ttf"; path = "../src/assets/fonts/WorkSans.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				B7C324FBFCB44CD3998553E4 /* leftImage.png */,
 				2E43605C008C42079C5DAEC9 /* rightImage.png */,
 				88B9254E0F77422C89B6B09B /* timeToU.png */,
+				76576543D67A47A0832DA8CC /* WorkSans.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				B47E09AFE2B64E819EB18A1A /* leftImage.png in Resources */,
 				6F35CFAFD2734B2EAB951C95 /* rightImage.png in Resources */,
 				C7503C6313544E77B9A940AB /* timeToU.png in Resources */,
+				FE5FEE70FD7E4887B5260104 /* WorkSans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
