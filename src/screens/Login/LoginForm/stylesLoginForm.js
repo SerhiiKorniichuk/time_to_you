@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
 		flex: 1,
 	},
 	footerContainer: {
-		flex: 4,
+		flex: 3,
 	},
 	socialMediaBlock: {
 		flex: 2,
@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
 	},
 	linkToSignUp: {
 		marginLeft: 5,
-		height: layout.scaledHeight(20),
+		height: layout.scaledHeight(25),
 	},
 	linkTextToSignUp: {
 		color: '#FE6F61',
