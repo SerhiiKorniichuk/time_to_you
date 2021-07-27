@@ -17,14 +17,12 @@ export const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	headerContainer: {
-		paddingTop: layout.scaledHeight(43),
-		paddingBottom: layout.scaledHeight(32),
+		paddingTop: layout.scaledHeight(38),
+		paddingBottom: layout.scaledHeight(27),
 		alignItems: 'center',
-		backgroundColor: '#888',
 	},
 	formContainer: {
 		flex: 1,
-		backgroundColor: '#777',
 	},
 	header: {
 		...layout.font([24, 33, 'normal', 'normal', 'Prata']),
