@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { View, Text, TouchableWithoutFeedback, TextInput } from 'react-native'
 import CountryPicker from 'react-native-country-picker-modal'
+import { SvgComponent } from '../../assets/icons/ArrowDown'
 import { styles } from './stylesPhoneInput'
 import { styles as customInputStyles } from '../CustomInput/stylesInput'
 
@@ -40,7 +41,9 @@ export const PhoneInput = (props) => {
 								{`(+${country?.callingCode})`}
 							</Text>
 						)}
-						<View style={styles.arrow}/>
+						<View style={styles.arrow}>
+							<SvgComponent/>
+						</View>
 						<View style={styles.divider}/>
 					</View>
 				</TouchableWithoutFeedback>

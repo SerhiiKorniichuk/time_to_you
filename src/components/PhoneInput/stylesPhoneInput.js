@@ -33,10 +33,12 @@ export const styles = ScaledSheet.create({
 		fontSize: '14@s',
 	},
 	arrow: {
+		marginTop: '3@vs',
 		marginRight: '8@s',
 		width: '10@s',
 		height: '10@vs',
-		backgroundColor: '#323131'
+		justifyContent: 'center',
+		alignItems: 'center'
 	},
 	divider: {
 		position: 'absolute',
