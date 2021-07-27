@@ -3,11 +3,9 @@ import { layout } from '../../helpers/responseLayout'
 
 export const styles = StyleSheet.create({
 	container: {
-		marginVertical: layout.scaledHeight(12),
+		marginVertical: layout.scaledHeight(12.5),
 		width: layout.scaledWidth(289),
 		height: layout.scaledHeight(74),
-		paddingTop: layout.scaledHeight(15),
-		marginBottom: layout.scaledHeight(10),
 	},
 	input: {
 		paddingBottom: 12,
