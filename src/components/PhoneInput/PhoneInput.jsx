@@ -10,15 +10,28 @@ import { styles } from './stylesPhoneInput'
 export const PhoneInput = (props) => {
 
 	const [countryCode, setCountryCode] = useState(props.countryCode)
-	const [country, setCountry] = useState({callingCode: props.callingCode})
+	const [country, setCountry] = useState({callingCode: [props.callingCode]})
 	const [visible, setVisible] = useState(false)
+	const [phone, setPhone] = useState('')
 
 	const selectCountry = (country) => {
 		setCountryCode(country.cca2)
 		setCountry(country)
+		props.onChange(prev => ({
+			...prev,
+			phone: country.callingCode[0] + phone,
+		}))
 	}
 
 	const toggleVisible = () => setVisible(!visible)
+
+	const handleChange = (txt) => {
+		props.onChange(prev => ({
+			...prev,
+			phone: country.callingCode[0] + txt,
+		}))
+		setPhone(txt)
+	}
 
 	return (
 		<View style={customInputStyles.container}>
@@ -51,7 +64,11 @@ export const PhoneInput = (props) => {
 						<View style={styles.divider}/>
 					</View>
 				</TouchableWithoutFeedback>
-				<TextInput style={styles.input}/>
+				<TextInput
+					style={styles.input}
+					onChangeText={handleChange}
+					value={phone}
+				/>
 			</View>
 		</View>
 	)
