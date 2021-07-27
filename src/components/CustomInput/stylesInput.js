@@ -7,7 +7,7 @@ export const styles = ScaledSheet.create({
 		width: '100%',
 	},
 	input: {
-		marginTop: '4@vs',
+		marginTop: '3@vs',
 		paddingTop: '12@vs',
 		paddingBottom: '11@vs',
 		paddingHorizontal: '12@s',

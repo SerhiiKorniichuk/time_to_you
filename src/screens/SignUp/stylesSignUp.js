@@ -3,33 +3,22 @@ import { ScaledSheet } from 'react-native-size-matters'
 
 export const styles = ScaledSheet.create({
 	container: {
+		position: 'relative',
 		flex: 1
 	},
 	background: {
-		flex: 1,
-		justifyContent: 'flex-end'
+		position: 'absolute',
+		top: '-30@vs',
+		left: 0,
+		right: 0,
+		bottom: 0,
 	},
 	block: {
+		flex: 1,
+		marginTop: '45%',
 		paddingVertical: '32@vs',
 		paddingHorizontal: '28@vs',
-		height: '83%',
-		borderRadius: 20,
+		borderRadius: '20@s',
 		backgroundColor: '#FBF9F9',
-		overflow: 'hidden'
-	},
-	additionBlock: {
-		marginTop: 'auto',
-		marginBottom: 18,
-		flexDirection: 'row',
-		justifyContent: 'center'
-	},
-	additionText: {
-		fontSize: 14
-	},
-	additionLink: {
-		marginLeft: 3,
-		color: '#FE6F61',
-		fontFamily: 'Poppins-SemiBold',
-		textDecorationLine: 'underline'
 	}
 })

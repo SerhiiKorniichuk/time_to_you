@@ -1,19 +1,29 @@
 import React, { useState } from 'react'
-import { Alert, Text, TouchableWithoutFeedback, View } from 'react-native'
+import { Text, TouchableWithoutFeedback, View } from 'react-native'
+import { ArrowLeftOutline } from '../../../assets/icons/ArrowLeftOutline'
+import { MainButton } from '../../../components/Buttons/MainButton/MainButton'
 import { Input } from '../../../components/CustomInput/Input'
+import { Select } from '../../../components/CustomSelect/Select'
 import { PhoneInput } from '../../../components/PhoneInput/PhoneInput'
+import { SignUpAdditionalBlock } from '../SignUpAdditionalBlock/SignUpAdditionalBlock'
+// import { Select } from '../../../components/Select/Select'
 // import { Input } from '../../../components/Input/Input'
 import { styles } from './stylesSignUpClientForm'
 
 
-export const SignUpClientForm = () => {
+export const SignUpClientForm = (props) => {
 
 	const [name, setName] = useState('')
 	const [lastName, setLastName] = useState('')
 	const [password, setPassword] = useState('')
+	const [gender, setGender] = useState('female')
 
 	const goPreviewsStep = () => {
-		Alert.alert('goPreviewsStep')
+		props.changeSignUpStage('chooseType')
+	}
+
+	const onSubmit = () => {
+
 	}
 
 	return (
@@ -21,7 +31,11 @@ export const SignUpClientForm = () => {
 			<View style={styles.headerBlock}>
 				<TouchableWithoutFeedback onPress={goPreviewsStep}>
 					<View style={styles.headerButton}>
-						<Text style={styles.headerButtonInner}>X</Text>
+						<ArrowLeftOutline
+							width={styles.arrow.width}
+							height={styles.arrow.height}
+							fillColor='#545454'
+						/>
 					</View>
 				</TouchableWithoutFeedback>
 				<Text style={styles.headerTitle}>Sign up</Text>
@@ -37,18 +51,28 @@ export const SignUpClientForm = () => {
 					value={lastName}
 					onChange={setLastName}
 				/>
-				<Input
-					label='Create password'
-					value={password}
-					type='password'
-					onChange={setPassword}
+				<Select
+					label='Gender'
+					value={gender}
+					list={[{label: 'Female', value: 'female'}, {label: 'Male', value: 'male'}]}
+					setValue={setGender}
 				/>
 				<PhoneInput
 					label='Phone number'
 					countryCode='DK'
 					callingCode='45'
 				/>
+				<Input
+					label='Create password'
+					value={password}
+					type='password'
+					onChange={setPassword}
+				/>
 			</View>
+			<View style={styles.buttonGroup}>
+				<MainButton type='primary' text='Continue' onPress={onSubmit}/>
+			</View>
+			<SignUpAdditionalBlock/>
 		</>
 	)
 }

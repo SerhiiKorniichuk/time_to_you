@@ -1,22 +1,22 @@
-import { StyleSheet } from 'react-native'
+import { ScaledSheet } from 'react-native-size-matters'
 
 
-export const styles = StyleSheet.create({
+export const styles = ScaledSheet.create({
 	body: {
-		paddingTop: 12,
-		paddingBottom: 10,
-		paddingHorizontal: 45,
+		paddingTop: '12@vs',
+		paddingBottom: '10@vs',
+		paddingHorizontal: '45@s',
 		width: '100%',
 		borderWidth: 1,
 		borderStyle: 'solid',
-		borderRadius: 50,
+		borderRadius: '50@s',
 		shadowColor: '#D8D8D8',
 		shadowOffset: {
 			width: 0,
-			height: 2
+			height: '2@vs'
 		},
-		shadowOpacity: 0.25,
-		elevation: 10
+		shadowOpacity: '0.25@vs',
+		elevation: '10@vs'
 	},
 	bodyVanilla: {
 		borderColor: '#FBF9F9',
@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
 	},
 	text: {
 		fontFamily: 'Poppins-Medium',
-		fontSize: 16,
+		fontSize: '16@s',
 		textAlign: 'center'
 	},
 	textVanilla: {

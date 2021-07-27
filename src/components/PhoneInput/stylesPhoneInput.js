@@ -29,16 +29,19 @@ export const styles = ScaledSheet.create({
 	callingCode: {
 		marginLeft: '-7@s',
 		marginRight: '7@s',
+		color: '#323131',
 		fontFamily: 'WorkSans',
 		fontSize: '14@s',
 	},
-	arrow: {
+	iconContainer: {
 		marginTop: '3@vs',
 		marginRight: '8@s',
-		width: '10@s',
-		height: '10@vs',
 		justifyContent: 'center',
 		alignItems: 'center'
+	},
+	arrow: {
+		width: '13@s',
+		height: '9@vs',
 	},
 	divider: {
 		position: 'absolute',
@@ -53,6 +56,9 @@ export const styles = ScaledSheet.create({
 		paddingBottom: '11@vs',
 		paddingLeft: '8@s',
 		height: '100%',
+		color: '#323131',
+		fontFamily: 'WorkSans',
+		fontSize: '14@s',
 		borderTopRightRadius: '6@s',
 		borderBottomRightRadius: '6@s',
 		borderWidth: 1,
