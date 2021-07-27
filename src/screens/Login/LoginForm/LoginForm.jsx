@@ -1,5 +1,6 @@
 import React from 'react'
-import { TextInput, View } from 'react-native'
+import { TextInput, View, Text } from 'react-native'
+import { Link } from 'react-router-native'
 import { useFormik } from 'formik'
 import { styles } from './stylesLoginForm'
 import { MainButton } from '../../../components/Buttons/MainButton/MainButton'
@@ -19,7 +20,6 @@ const Login = () => {
 		<>
 			<Input
 				label={'Phone number'}
-				type={'text'}
 				value={values.phone}
 				onChange={handleChange('phone')}
 			/>
@@ -29,6 +29,11 @@ const Login = () => {
 				value={values.phone}
 				onChange={handleChange('phone')}
 			/>
+			<View style={styles.linkContainer}>
+				<Link to='/'>
+					<Text>Forgot password?</Text>
+				</Link>
+			</View>
 		</>
 	)
 }
