@@ -1,17 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { SafeAreaView, View, Text, ImageBackground } from 'react-native'
-import { useFormik } from 'formik'
 import { styles } from './stylesLogin'
 import LoginForm from './LoginForm/LoginForm'
 
-const signUpBg = require('../../assets/images/SingUp/sing_up_bg.jpg')
+
+const signUpBg = require('../../assets/images/SignUp/sign_up_bg.jpg')
+
 
 const Login = () => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<ImageBackground
 				source={signUpBg}
-				resizeMode='cover'
+				resizeMode="cover"
 				style={styles.bgContainer}
 			>
 				<View style={styles.contentContainer}>
@@ -19,7 +20,7 @@ const Login = () => {
 						<Text style={styles.header}>Log in</Text>
 					</View>
 					<View style={styles.formContainer}>
-						<LoginForm />
+						<LoginForm/>
 					</View>
 				</View>
 			</ImageBackground>

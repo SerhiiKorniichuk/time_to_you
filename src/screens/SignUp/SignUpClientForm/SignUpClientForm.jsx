@@ -22,6 +22,10 @@ export const SignUpClientForm = (props) => {
 		props.changeSignUpStage('chooseType')
 	}
 
+	const onChange = () => {
+
+	}
+
 	const onSubmit = () => {
 
 	}
@@ -61,6 +65,7 @@ export const SignUpClientForm = (props) => {
 					label='Phone number'
 					countryCode='DK'
 					callingCode='45'
+					onChange={onChange}
 				/>
 				<Input
 					label='Create password'

@@ -8,14 +8,17 @@ import { SocialMediaButton } from '../../../components/Buttons/SocialMediaButton
 import { PhoneInput } from '../../../components/PhoneInput/PhoneInput'
 import { styles } from './stylesLoginForm'
 
+
 const Login = () => {
+
 	const formik = useFormik({
 		initialValues: {
 			phone: '',
-			password: '',
+			password: ''
 		},
-		onSubmit: data => console.log(data),
+		onSubmit: data => console.log(data)
 	})
+
 	const { values, handleChange, handleBlur, handleSubmit, setValues } = formik
 
 	const handlePress = () => console.log('click')
@@ -24,14 +27,14 @@ const Login = () => {
 		<View style={styles.container}>
 			<View style={styles.phoneInput}>
 				<PhoneInput
-					label={'Phone number'}
+					label='Phone number'
 					value={values.phone}
 					onChange={setValues}
 				/>
 			</View>
 			<Input
-				label={'Password'}
-				type={'password'}
+				label='Password'
+				type='password'
 				value={values.password}
 				onChange={handleChange('password')}
 			/>
@@ -42,8 +45,8 @@ const Login = () => {
 			</View>
 			<View style={styles.btnContainer}>
 				<MainButton
-					type={'primary'}
-					text={'Login'}
+					type='primary'
+					text='Login'
 					onPress={handleSubmit}
 				/>
 			</View>
@@ -56,11 +59,11 @@ const Login = () => {
 					</View>
 					<View style={styles.socialMediaBtnsBlock}>
 						<SocialMediaButton
-							type={'facebook'}
+							type='facebook'
 							onPress={handlePress}
 						/>
 						<SocialMediaButton
-							type={'google'}
+							type='google'
 							onPress={handlePress}
 						/>
 					</View>

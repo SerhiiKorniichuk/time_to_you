@@ -17,7 +17,7 @@ export const PhoneInput = (props) => {
 	const selectCountry = (country) => {
 		setCountryCode(country.cca2)
 		setCountry(country)
-		props.onChange(prev => ({
+		props.onChange((prev) => ({
 			...prev,
 			phone: country.callingCode[0] + phone,
 		}))
@@ -26,7 +26,7 @@ export const PhoneInput = (props) => {
 	const toggleVisible = () => setVisible(!visible)
 
 	const handleChange = (txt) => {
-		props.onChange(prev => ({
+		props.onChange((prev) => ({
 			...prev,
 			phone: country.callingCode[0] + txt,
 		}))
@@ -78,7 +78,8 @@ export const PhoneInput = (props) => {
 PhoneInput.propTypes = {
 	label: PropTypes.string,
 	countryCode: PropTypes.string,
-	callingCode: PropTypes.string
+	callingCode: PropTypes.string,
+	onChange: PropTypes.func.isRequired
 }
 
 PhoneInput.defaultProps = {
