@@ -3,8 +3,8 @@ import { layout } from '../../helpers/responseLayout'
 
 export const styles = StyleSheet.create({
 	mainContainer: {
-		paddingTop: layout.scaledHeight(5),
-		paddingBottom: layout.scaledHeight(20),
+		paddingTop: layout.scaledHeight(15),
+		paddingBottom: layout.scaledHeight(10),
 	},
 	textLabel: {
 		color: '#8E8E8E',

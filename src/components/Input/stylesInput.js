@@ -6,8 +6,8 @@ export const styles = StyleSheet.create({
 		marginVertical: layout.scaledHeight(12),
 		width: layout.scaledWidth(289),
 		height: layout.scaledHeight(74),
-		paddingTop: layout.scaledHeight(5),
-		marginBottom: layout.scaledHeight(20),
+		paddingTop: layout.scaledHeight(15),
+		marginBottom: layout.scaledHeight(10),
 	},
 	input: {
 		paddingBottom: 12,
