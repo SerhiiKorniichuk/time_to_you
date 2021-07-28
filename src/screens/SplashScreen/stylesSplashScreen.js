@@ -1,9 +1,6 @@
-import { StyleSheet } from 'react-native'
-import { layout } from '../../helpers/responseLayout'
+import { ScaledSheet } from 'react-native-size-matters'
 
-const btnFont = layout.font([16, 24, '500', 'normal', 'Poppins'])
-
-export const styles = StyleSheet.create({
+export const styles = ScaledSheet.create({
 	container: {
 		flex: 1,
 	},
@@ -14,56 +11,54 @@ export const styles = StyleSheet.create({
 	topContainer: {
 		flex: 3,
 	},
+	emptyContainer: {
+		flex: 1,
+	},
 	leftImageBox: {
-		width: layout.scaledWidth(147),
-		height: layout.scaledHeight(194),
-		left: 0,
-		top: layout.scaledHeight(54),
-		position: 'absolute',
+		flex: 3,
 	},
 	leftImage: {
+		alignSelf: 'flex-start',
 		resizeMode: 'contain',
-		width: '100%',
-		height: '100%',
+		aspectRatio: 0.75,
+		height: '180%',
 	},
 	rightImageBox: {
-		width: layout.scaledWidth(202),
-		height: layout.scaledHeight(285),
-		right: 0,
-		top: layout.scaledHeight(149),
-		position: 'absolute',
+		flex: 6,
 	},
 	rightImage: {
-		width: '100%',
-		height: '100%',
+		alignSelf: 'flex-end',
 		resizeMode: 'contain',
+		aspectRatio: 0.71,
+		height: '120%',
 	},
 	logoBox: {
-		width: layout.scaledWidth(210),
-		height: layout.scaledHeight(145),
-		position: 'absolute',
-		left: layout.scaledWidth(38),
-		top: layout.scaledHeight(397),
+		flex: 4,
+		alignItems: 'flex-start',
 	},
 	logo: {
+		marginLeft: '38@s',
 		resizeMode: 'contain',
-		width: '100%',
-		height: '100%',
+		aspectRatio: 1.45,
+		height: '80%',
 	},
 	logoTextBlock: {
-		marginTop: layout.scaledHeight(10),
+		marginTop: '10@vs',
+		marginLeft: '38@s',
 		flexDirection: 'row',
 		alignItems: 'center',
+		justifyContent: 'flex-start',
 	},
 	logoTextLine: {
-		flex: 1,
 		height: 1,
-		width: layout.scaledWidth(52),
+		width: '52@s',
 		backgroundColor: '#8E8E8E',
 		marginRight: 8,
 	},
 	logoText: {
-		...layout.font([18, 19, 'normal', 'normal', 'Questrial']),
+		fontSize: '18@vs',
+		lineHeight: '19@vs',
+		fontFamily: 'Questrial',
 		color: '#8E8E8E',
 	},
 	bottomContainer: {
@@ -72,23 +67,29 @@ export const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	button: {
-		height: layout.scaledHeight(55),
-		width: layout.scaledWidth(310),
+		height: '55@vs',
+		width: '310@s',
 		backgroundColor: '#FF9677',
 		borderRadius: 50,
-		marginVertical: layout.scaledHeight(8),
+		marginVertical: '8@vs',
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
 	orangeBtnTxt: {
-		...btnFont,
+		fontSize: '16@vs',
+		lineHeight: '24@vs',
+		fontWeight: '500',
+		fontFamily: 'Poppins',
 		color: '#FFFFFF',
 	},
 	whiteButton: {
 		backgroundColor: '#fff',
 	},
 	whiteBtnTxt: {
-		...btnFont,
+		fontSize: '16@vs',
+		lineHeight: '24@vs',
+		fontWeight: '500',
+		fontFamily: 'Poppins',
 		color: '#FE6F61',
 	},
 })

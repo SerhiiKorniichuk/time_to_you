@@ -1,7 +1,6 @@
-import { StyleSheet } from 'react-native'
-import { layout } from '../../helpers/responseLayout'
+import { ScaledSheet } from 'react-native-size-matters'
 
-export const styles = StyleSheet.create({
+export const styles = ScaledSheet.create({
 	container: {
 		flex: 1,
 	},
@@ -9,23 +8,28 @@ export const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'flex-end',
 	},
+	emptyContainer: {
+		flex: 1,
+	},
 	contentContainer: {
-		height: layout.scaledHeight(631),
+		flex: 4,
 		backgroundColor: '#FBF9F9',
 		borderTopLeftRadius: 20,
 		borderTopRightRadius: 20,
 		alignItems: 'center',
 	},
 	headerContainer: {
-		paddingTop: layout.scaledHeight(38),
-		paddingBottom: layout.scaledHeight(27),
+		paddingTop: '35@vs',
+		paddingBottom: '15@vs',
 		alignItems: 'center',
 	},
 	formContainer: {
 		flex: 1,
 	},
 	header: {
-		...layout.font([24, 33, 'normal', 'normal', 'Prata']),
+		fontSize: '24@vs',
+		lineHeight: '33@vs',
+		fontFamily: 'Prata',
 		color: '#323131',
 	},
 })
