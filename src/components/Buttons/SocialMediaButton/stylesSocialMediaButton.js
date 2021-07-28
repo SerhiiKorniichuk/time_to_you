@@ -1,11 +1,10 @@
-import { StyleSheet } from 'react-native'
-import { layout } from '../../../helpers/responseLayout'
+import { ScaledSheet } from 'react-native-size-matters'
 
-export const styles = StyleSheet.create({
+export const styles = ScaledSheet.create({
 	socialMediaBtnContainer: {
-		width: layout.scaledWidth(138),
-		height: layout.scaledHeight(52),
-		marginHorizontal: layout.scaledWidth(5),
+		width: '138@s',
+		height: '52@vs',
+		marginHorizontal: '5@s',
 	},
 	socialMediaBtn: {
 		flex: 1,
@@ -17,12 +16,14 @@ export const styles = StyleSheet.create({
 		borderWidth: 2,
 		borderStyle: 'solid',
 		borderColor: '#E9E9E9',
-		width: layout.scaledWidth(138),
-		height: layout.scaledHeight(52),
+		width: '138@s',
+		height: '52@vs',
 	},
 	socialMediaBtnTxt: {
 		marginLeft: 5,
 		color: '#323131',
-		...layout.font([14, 19, 'normal', 'normal', 'Poppins']),
+		fontSize: '14@vs',
+		lineHeight: '19@vs',
+		fontFamily: 'Poppins',
 	},
 })
