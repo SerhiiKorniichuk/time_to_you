@@ -12,7 +12,7 @@ const Login = () => {
 		<SafeAreaView style={styles.container}>
 			<ImageBackground
 				source={signUpBg}
-				resizeMode="cover"
+				resizeMode='cover'
 				style={styles.bgContainer}
 			>
 				<View style={styles.contentContainer}>

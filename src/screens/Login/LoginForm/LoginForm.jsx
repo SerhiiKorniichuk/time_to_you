@@ -19,7 +19,7 @@ const Login = () => {
 		onSubmit: data => console.log(data)
 	})
 
-	const { values, handleChange, handleBlur, handleSubmit, setValues } = formik
+	const { values, handleChange, handleSubmit, setValues } = formik
 
 	const handlePress = () => console.log('click')
 
