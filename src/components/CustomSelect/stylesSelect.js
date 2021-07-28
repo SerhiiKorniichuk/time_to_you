@@ -2,40 +2,34 @@ import { ScaledSheet } from 'react-native-size-matters'
 
 
 export const styles = ScaledSheet.create({
-	textLabel: {
-		paddingBottom: '6@vs',
-		color: '#8E8E8E',
-		fontFamily: 'Poppins',
-		fontSize: '12@s',
-		lineHeight: '18@s'
-	},
 	container: {
-		marginTop: '4@vs',
-		width: '100%',
+		marginTop: '1@vs',
+		flex: 1,
 		height: '50@vs',
-		borderRadius: '6@s'
+		borderRadius: '6@msr'
 	},
 	inputIOS: {
-		paddingLeft: '13@s',
-		paddingRight: '30@s',
+		paddingTop: '14@vs',
+		paddingBottom: '9@vs',
+		paddingHorizontal: '12@msr',
 		color: '#323131',
 		fontFamily: 'Poppins',
-		fontSize: '16@s',
+		fontSize: '14@msr',
 		borderWidth: 1,
-		borderColor: 'gray',
-		borderRadius: '4@s'
+		borderColor: '#E9E9E9',
+		borderRadius: '6@msr',
 	},
 	inputAndroid: {
 		paddingTop: '14@vs',
 		paddingBottom: '9@vs',
-		paddingHorizontal: '12@s',
+		paddingHorizontal: '12@msr',
 		color: '#323131',
 		fontFamily: 'Poppins',
-		fontSize: '14@s',
+		fontSize: '14@msr',
 		borderWidth: 1,
 		borderStyle: 'solid',
 		borderColor: '#E9E9E9',
-		borderRadius: '6@s',
+		borderRadius: '6@msr',
 		backgroundColor: '#FFFFFF',
 	},
 	iconContainer: {

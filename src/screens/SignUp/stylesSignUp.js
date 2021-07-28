@@ -7,18 +7,14 @@ export const styles = ScaledSheet.create({
 		flex: 1
 	},
 	background: {
-		position: 'absolute',
-		top: '-30@vs',
-		left: 0,
-		right: 0,
-		bottom: 0,
+		flex: 1
 	},
 	block: {
 		flex: 1,
-		marginTop: '45%',
-		paddingVertical: '32@vs',
-		paddingHorizontal: '28@vs',
-		borderRadius: '20@s',
+		marginTop: '153@mvs',
+		paddingVertical: '32@mvs',
+		paddingHorizontal: '28@msr',
+		borderRadius: '20@msr',
 		backgroundColor: '#FBF9F9',
 	}
 })

@@ -4,12 +4,12 @@ import { ScaledSheet } from 'react-native-size-matters'
 export const styles = ScaledSheet.create({
 	container: {
 		flex: 1,
-		height: '100%',
+		// height: '100%',
 		alignItems: 'center'
 	},
 	title: {
-		paddingTop: '48@vs',
-		width: '181@s',
+		paddingTop: '48@msr',
+		width: '181@msr',
 		fontSize: '32@msr',
 		fontFamily: 'Prata',
 		textAlign: 'center'
@@ -22,13 +22,13 @@ export const styles = ScaledSheet.create({
 	},
 	buttonGroup: {
 		paddingTop: '32@vs',
-		width: '100%',
+		// marginBottom: '100@vs',
+		width: '100%'
 	},
 	button: {
-		marginBottom: '16@s'
+		marginBottom: '16@msr'
 	},
 	additionBlock: {
-		position: 'absolute',
-		bottom: 0
+		marginTop: 'auto'
 	}
 })

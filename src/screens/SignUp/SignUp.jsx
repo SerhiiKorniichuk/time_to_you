@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { View, ScrollView } from 'react-native'
+import { View, ScrollView, ImageBackground } from 'react-native'
 import { SignUpChooseType } from './SignUpChooseType/SignUpChooseType'
 import { SignUpClientForm } from './SignUpClientForm/SignUpClientForm'
 import { styles } from './stylesSignUp'
 
 
-import SignUpBg from '../../assets/images/SignUp/sign_up_bg.svg'
+import SignUpBg from '../../assets/images/SignUp/sign_up_bg.jpg'
 
 
 const SignUp = () => {
@@ -32,9 +32,14 @@ const SignUp = () => {
 
 	return (
 		<View style={styles.container}>
-			<SignUpBg style={styles.background}/>
-			{stageType === 'chooseType' && getChooseTypeScreen()}
-			{stageType === 'clientForm' && getClientFormScreen()}
+			<ImageBackground
+				source={SignUpBg}
+				resizeMode='cover'
+				style={styles.background}
+			>
+				{stageType === 'chooseType' && getChooseTypeScreen()}
+				{stageType === 'clientForm' && getClientFormScreen()}
+			</ImageBackground>
 		</View>
 	)
 }

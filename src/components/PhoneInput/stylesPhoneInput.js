@@ -3,7 +3,7 @@ import { ScaledSheet } from 'react-native-size-matters'
 
 export const styles = ScaledSheet.create({
 	body: {
-		marginTop: '4@vs',
+		marginTop: '1@vs',
 		height: '50@vs',
 		flexDirection: 'row',
 		alignItems: 'center',
@@ -15,8 +15,8 @@ export const styles = ScaledSheet.create({
 		height: '100%',
 		flexDirection: 'row',
 		alignItems: 'center',
-		borderTopLeftRadius: '6@s',
-		borderBottomLeftRadius: '6@s',
+		borderTopLeftRadius: '6@msr',
+		borderBottomLeftRadius: '6@msr',
 		borderWidth: 1,
 		borderRightWidth: 0,
 		borderStyle: 'solid',
@@ -31,7 +31,7 @@ export const styles = ScaledSheet.create({
 		marginRight: '7@s',
 		color: '#323131',
 		fontFamily: 'WorkSans',
-		fontSize: '14@s',
+		fontSize: '14@msr',
 	},
 	iconContainer: {
 		marginTop: '3@vs',
@@ -58,9 +58,9 @@ export const styles = ScaledSheet.create({
 		height: '100%',
 		color: '#323131',
 		fontFamily: 'WorkSans',
-		fontSize: '14@s',
-		borderTopRightRadius: '6@s',
-		borderBottomRightRadius: '6@s',
+		fontSize: '14@msr',
+		borderTopRightRadius: '6@msr',
+		borderBottomRightRadius: '6@msr',
 		borderWidth: 1,
 		borderLeftWidth: 0,
 		borderStyle: 'solid',
