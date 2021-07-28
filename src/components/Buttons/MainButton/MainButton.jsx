@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Text, TouchableWithoutFeedback, View } from 'react-native'
+import LinearGradient from 'react-native-linear-gradient'
 import { Link } from 'react-router-native'
 import { styles } from './stylesMainButton'
 
@@ -30,6 +31,16 @@ export const MainButton = (props) => {
 	}
 
 	const getInnerText = () => {
+		if (props.type === 'primary') {
+			return (
+				<LinearGradient
+					colors={['#FF9677', '#F57D72']}
+					style={[styles.body, bodyStyle, props.style]}
+				>
+					<Text style={[styles.text, textStyle]}>{props.text}</Text>
+				</LinearGradient>
+			)
+		}
 		return (
 			<View style={[styles.body, bodyStyle, props.style]}>
 				<Text style={[styles.text, textStyle]}>{props.text}</Text>

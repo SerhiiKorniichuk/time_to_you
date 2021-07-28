@@ -28,8 +28,7 @@ export const styles = ScaledSheet.create({
 	},
 	bodyPrimary: {
 		borderStyle: 'solid',
-		borderColor: '#FBF9F9',
-		backgroundColor: '#FE6F61'
+		borderColor: '#FBF9F9'
 	},
 	text: {
 		fontFamily: 'Poppins-Medium',
