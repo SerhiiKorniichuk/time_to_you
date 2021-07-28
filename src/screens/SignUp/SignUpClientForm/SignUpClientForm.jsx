@@ -6,13 +6,9 @@ import { Input } from '../../../components/CustomInput/Input'
 import { Select } from '../../../components/CustomSelect/Select'
 import { PhoneInput } from '../../../components/PhoneInput/PhoneInput'
 import { SignUpAdditionalBlock } from '../SignUpAdditionalBlock/SignUpAdditionalBlock'
-// import { Select } from '../../../components/Select/Select'
-// import { Input } from '../../../components/Input/Input'
 import { styles } from './stylesSignUpClientForm'
 
-
-export const SignUpClientForm = (props) => {
-
+export const SignUpClientForm = props => {
 	const [name, setName] = useState('')
 	const [lastName, setLastName] = useState('')
 	const [password, setPassword] = useState('')
@@ -22,13 +18,9 @@ export const SignUpClientForm = (props) => {
 		props.changeSignUpStage('chooseType')
 	}
 
-	const onChange = () => {
+	const onChange = () => {}
 
-	}
-
-	const onSubmit = () => {
-
-	}
+	const onSubmit = () => {}
 
 	return (
 		<>
@@ -45,11 +37,7 @@ export const SignUpClientForm = (props) => {
 				<Text style={styles.headerTitle}>Sign up</Text>
 			</View>
 			<View style={styles.formBlock}>
-				<Input
-					label='Name'
-					value={name}
-					onChange={setName}
-				/>
+				<Input label='Name' value={name} onChange={setName} />
 				<Input
 					label='Last name'
 					value={lastName}
@@ -58,7 +46,10 @@ export const SignUpClientForm = (props) => {
 				<Select
 					label='Gender'
 					value={gender}
-					list={[{label: 'Female', value: 'female'}, {label: 'Male', value: 'male'}]}
+					list={[
+						{ label: 'Female', value: 'female' },
+						{ label: 'Male', value: 'male' },
+					]}
 					setValue={setGender}
 				/>
 				<PhoneInput
@@ -75,9 +66,9 @@ export const SignUpClientForm = (props) => {
 				/>
 			</View>
 			<View style={styles.buttonGroup}>
-				<MainButton type='primary' text='Continue' onPress={onSubmit}/>
+				<MainButton type='primary' text='Continue' onPress={onSubmit} />
 			</View>
-			<SignUpAdditionalBlock/>
+			<SignUpAdditionalBlock />
 		</>
 	)
 }
