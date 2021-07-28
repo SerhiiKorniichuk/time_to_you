@@ -17,14 +17,27 @@ const SplashScreen = () => {
 				style={styles.bgContainer}
 			>
 				<View style={styles.topContainer}>
+					<View style={styles.emptyContainer}></View>
 					<View style={styles.leftImageBox}>
-						<Image source={leftImage} style={styles.leftImage} />
+						<Image
+							source={leftImage}
+							style={styles.leftImage}
+							resizeMode='stretch'
+						/>
 					</View>
 					<View style={styles.rightImageBox}>
-						<Image source={rightImage} style={styles.rightImage} />
+						<Image
+							source={rightImage}
+							style={styles.rightImage}
+							resizeMode='cover'
+						/>
 					</View>
 					<View style={styles.logoBox}>
-						<Image source={timeToU} style={styles.logo} />
+						<Image
+							source={timeToU}
+							style={styles.logo}
+							resizeMode='cover'
+						/>
 						<View style={styles.logoTextBlock}>
 							<View style={styles.logoTextLine} />
 							<Text style={styles.logoText}>

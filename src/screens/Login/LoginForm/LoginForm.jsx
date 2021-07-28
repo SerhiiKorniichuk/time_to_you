@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 import { Link } from 'react-router-native'
 import { useFormik } from 'formik'
 import { MainButton } from '../../../components/Buttons/MainButton/MainButton'
-import { Input } from '../../../components/Input/Input'
+import { Input } from '../../../components/CustomInput/Input'
 import { SocialMediaButton } from '../../../components/Buttons/SocialMediaButton/SocialMediaButton'
 import { PhoneInput } from '../../../components/PhoneInput/PhoneInput'
 import { styles } from './stylesLoginForm'
@@ -22,19 +22,19 @@ const Login = () => {
 
 	return (
 		<View style={styles.container}>
-			<View style={styles.phoneInput}>
+			<View style={styles.inputsContainer}>
 				<PhoneInput
 					label={'Phone number'}
 					value={values.phone}
 					onChange={setValues}
 				/>
+				<Input
+					label={'Password'}
+					type={'password'}
+					value={values.password}
+					onChange={handleChange('password')}
+				/>
 			</View>
-			<Input
-				label={'Password'}
-				type={'password'}
-				value={values.password}
-				onChange={handleChange('password')}
-			/>
 			<View style={styles.linkContainer}>
 				<Link to='/'>
 					<Text style={styles.linkText}>Forgot password?</Text>

@@ -14,6 +14,7 @@ const Login = () => {
 				resizeMode='cover'
 				style={styles.bgContainer}
 			>
+				<View style={styles.emptyContainer}></View>
 				<View style={styles.contentContainer}>
 					<View style={styles.headerContainer}>
 						<Text style={styles.header}>Log in</Text>
