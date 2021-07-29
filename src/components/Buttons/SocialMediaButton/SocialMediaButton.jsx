@@ -7,10 +7,7 @@ import { styles } from './stylesSocialMediaButton'
 
 export const SocialMediaButton = ({ type, onPress }) => {
 	return (
-		<TouchableOpacity
-			onPress={onPress}
-			style={styles.socialMediaBtnContainer}
-		>
+		<TouchableOpacity onPress={onPress} style={styles.socialMediaBtnContainer}>
 			<View style={styles.socialMediaBtn}>
 				<Image source={icons[type]}/>
 				<Text style={styles.socialMediaBtnTxt}>{btnTypes[type]}</Text>
@@ -18,6 +15,7 @@ export const SocialMediaButton = ({ type, onPress }) => {
 		</TouchableOpacity>
 	)
 }
+
 
 SocialMediaButton.propTypes = {
 	type: PropTypes.oneOf(['facebook', 'google']).isRequired,

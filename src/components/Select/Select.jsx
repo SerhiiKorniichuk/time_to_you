@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 import PropTypes from 'prop-types'
 import RNPickerSelect from 'react-native-picker-select'
 import { ArrowDownOutline } from '../../assets/icons/ArrowDownOutline'
-import { styles as customInputStyles } from '../CustomInput/stylesInput'
+import { styles as customInputStyles } from '../Input/stylesInput'
 import { styles } from './stylesSelect'
 
 

@@ -1,15 +1,13 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import { MainButton } from '../../../components/Buttons/MainButton/MainButton'
-import { SignUpAdditionalBlock } from '../SignUpAdditionalBlock/SignUpAdditionalBlock'
+import { AuthAddBlockWithLink } from '../../Authorization/AuthAddBlockWithLink/AuthAddBlockWithLink'
 import { styles } from './stylesSignUpChooseType'
 
 
 export const SignUpChooseType = (props) => {
 
-	const onPress = () => {
-		props.changeSignUpStage('clientForm')
-	}
+	const onPress = () => props.changeSignUpStage('clientForm')
 
 	return (
 		<View style={styles.container}>
@@ -19,7 +17,12 @@ export const SignUpChooseType = (props) => {
 				<MainButton style={styles.button} type='outline' text='I am client' onPress={onPress}/>
 				<MainButton style={styles.button} link='/login' type='primary' text='I am business'/>
 			</View>
-			<SignUpAdditionalBlock style={styles.additionBlock}/>
+			<AuthAddBlockWithLink
+				style={styles.additionBlock}
+				mainText='Already have an account?'
+				linkText='Sign in'
+				link='/auth/login'
+			/>
 		</View>
 	)
 }

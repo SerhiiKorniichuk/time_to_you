@@ -3,15 +3,13 @@ import { ScaledSheet } from 'react-native-size-matters'
 
 export const styles = ScaledSheet.create({
 	container: {
-		marginVertical: '11@msr',
-		flex: 1
+		marginVertical: '11@msr'
 	},
 	input: {
 		marginTop: '1@vs',
 		paddingTop: '13@vs',
 		paddingBottom: '10@vs',
 		paddingHorizontal: '12@s',
-		flex: 1,
 		height: '50@vs',
 		fontFamily: 'Poppins',
 		fontSize: '14@msr',

@@ -11,10 +11,14 @@ export const styles = ScaledSheet.create({
 	},
 	block: {
 		flex: 1,
-		marginTop: '153@mvs',
+		marginTop: '153@vs',
 		paddingVertical: '32@mvs',
 		paddingHorizontal: '28@msr',
 		borderRadius: '20@msr',
 		backgroundColor: '#FBF9F9',
+	},
+	formBlock: {
+		paddingHorizontal: '15@s',
+		marginTop: '35@vs'
 	}
 })

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { View, Text, TouchableWithoutFeedback, TextInput } from 'react-native'
 import CountryPicker from 'react-native-country-picker-modal'
 import { ArrowDownPrimary } from '../../assets/icons/ArrowDownPrimary'
-import { styles as customInputStyles } from '../CustomInput/stylesInput'
+import { styles as customInputStyles } from '../Input/stylesInput'
 import { styles } from './stylesPhoneInput'
 
 

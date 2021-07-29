@@ -1,32 +1,22 @@
-import React from 'react'
-import { SafeAreaView, View, Text, ImageBackground } from 'react-native'
-import { styles } from './stylesLogin'
-import LoginForm from './LoginForm/LoginForm'
+import React, { useState } from 'react'
+import { ScrollView, View } from 'react-native'
+import { LoginForm } from './LoginForm/LoginForm'
+import { styles as stylesAuthorization } from '../Authorization/stylesAuthorization'
 
 
-const signUpBg = require('../../assets/images/SignUp/sign_up_bg.jpg')
+export const Login = () => {
 
+	const [stageType, setStageType] = useState('login')
 
-const Login = () => {
+	const changeLoginStage = (stageName) => setStageType(stageName)
+
 	return (
-		<SafeAreaView style={styles.container}>
-			<ImageBackground
-				source={signUpBg}
-				resizeMode='cover'
-				style={styles.bgContainer}
-			>
-				<View style={styles.emptyContainer}></View>
-				<View style={styles.contentContainer}>
-					<View style={styles.headerContainer}>
-						<Text style={styles.header}>Log in</Text>
-					</View>
-					<View style={styles.formContainer}>
-						<LoginForm/>
-					</View>
+		<>
+			<ScrollView>
+				<View style={stylesAuthorization.block}>
+					{stageType === 'login' && <LoginForm changeLoginStage={changeLoginStage}/>}
 				</View>
-			</ImageBackground>
-		</SafeAreaView>
+			</ScrollView>
+		</>
 	)
 }
-
-export default Login

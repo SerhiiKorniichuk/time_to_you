@@ -4,7 +4,6 @@ import { ScaledSheet } from 'react-native-size-matters'
 export const styles = ScaledSheet.create({
 	container: {
 		flex: 1,
-		// height: '100%',
 		alignItems: 'center'
 	},
 	title: {
@@ -22,7 +21,6 @@ export const styles = ScaledSheet.create({
 	},
 	buttonGroup: {
 		paddingTop: '32@vs',
-		// marginBottom: '100@vs',
 		width: '100%'
 	},
 	button: {

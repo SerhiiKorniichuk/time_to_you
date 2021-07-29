@@ -1,15 +1,14 @@
 import React from 'react'
 import { Route } from 'react-router-native'
-import Login from '../../screens/Login/Login'
-import SignUp from '../../screens/SignUp/SignUp'
-import SplashScreen from '../../screens/SplashScreen/SplashScreen'
+import { Authorization } from '../../screens/Authorization/Authorization'
+import { SplashScreen } from '../../screens/SplashScreen/SplashScreen'
+
 
 const GuestRoutes = () => {
 	return (
 		<>
-			<Route exact path={'/signup'} component={SignUp} />
-			<Route exact path={'/login'} component={Login} />
-			<Route exact path={'/'} component={SplashScreen} />
+			<Route path='/auth' component={Authorization} />
+			<Route exact path='/' component={SplashScreen} />
 		</>
 	)
 }
