@@ -1,12 +1,9 @@
 import React from 'react'
-import { Route } from 'react-router-native'
-import Onboarding from '../../screens/Onboarding/Onboarding'
+// import { Route } from 'react-router-native'
 
 const PrivateRoutes = () => {
 	return (
-		<>
-			<Route exact path={'/onboarding'} component={Onboarding} />
-		</>
+		<></>
 	)
 }
 

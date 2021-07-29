@@ -26,7 +26,7 @@ export const LoginForm = ({changeLoginStage}) => {
 	const goToRecoveryScreen = () => changeLoginStage('recovery')
 
 	return (
-		<View style={{ flex: 1 }}>
+		<>
 			<HeaderBlock title='Log in' style={styles.headerBlock}/>
 			<View style={stylesAuthorization.formBlock}>
 				<PhoneInput
@@ -50,7 +50,7 @@ export const LoginForm = ({changeLoginStage}) => {
 				<MainButton
 					type='primary'
 					text='Login'
-					onPress={handleSubmit}
+					link='/screens'
 				/>
 			</View>
 			<Text style={styles.socialMediaText}>
@@ -75,6 +75,6 @@ export const LoginForm = ({changeLoginStage}) => {
 					containerStyle={styles.addBlock}
 				/>
 			</View>
-		</View>
+		</>
 	)
 }
