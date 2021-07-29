@@ -1,18 +1,17 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-import { Link } from 'react-router-native'
+import { View, Text, TouchableWithoutFeedback } from 'react-native'
 import { useFormik } from 'formik'
 import { MainButton } from '../../../components/Buttons/MainButton/MainButton'
 import { Input } from '../../../components/Input/Input'
 import { SocialMediaButton } from '../../../components/Buttons/SocialMediaButton/SocialMediaButton'
 import { PhoneInput } from '../../../components/PhoneInput/PhoneInput'
 import { HeaderBlock } from '../../Authorization/HeaderBlock/HeaderBlock'
-import { AuthAddBlockWithLink } from '../../Authorization/AuthAddBlockWithLink/AuthAddBlockWithLink'
+import { AddBlockWithActionText } from '../../Authorization/AddBlockWithActionText/AddBlockWithActionText'
 import { styles as stylesAuthorization } from './../../Authorization/stylesAuthorization'
 import { styles } from './stylesLoginForm'
 
 
-export const LoginForm = () => {
+export const LoginForm = ({changeLoginStage}) => {
 
 	const formik = useFormik({
 		initialValues: {
@@ -24,7 +23,7 @@ export const LoginForm = () => {
 
 	const { values, handleChange, handleSubmit, setValues } = formik
 
-	const handlePress = () => console.log('click')
+	const goToRecoveryScreen = () => changeLoginStage('recovery')
 
 	return (
 		<View style={{ flex: 1 }}>
@@ -42,9 +41,9 @@ export const LoginForm = () => {
 					onChange={handleChange('password')}
 				/>
 				<View style={styles.linkContainer}>
-					<Link to='/' underlayColor='none'>
+					<TouchableWithoutFeedback onPress={goToRecoveryScreen}>
 						<Text style={styles.linkText}>Forgot password?</Text>
-					</Link>
+					</TouchableWithoutFeedback>
 				</View>
 			</View>
 			<View style={styles.buttonContainer}>
@@ -60,19 +59,20 @@ export const LoginForm = () => {
 			<View style={styles.socialMediaButtons}>
 				<SocialMediaButton
 					type='facebook'
-					onPress={handlePress}
+					onPress={() => {}}
 				/>
 				<SocialMediaButton
 					type='google'
-					onPress={handlePress}
+					onPress={() => {}}
 				/>
 			</View>
 			<View>
-				<AuthAddBlockWithLink
-					style={styles.linkBlock}
+				<AddBlockWithActionText
+					type='link'
 					mainText='Don’t have an account?'
-					linkText='Sign up'
+					actionText='Sign up'
 					link='/auth/signup'
+					containerStyle={styles.addBlock}
 				/>
 			</View>
 		</View>

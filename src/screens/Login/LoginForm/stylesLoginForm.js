@@ -28,7 +28,7 @@ export const styles = ScaledSheet.create({
 	socialMediaButtons: {
 		flexDirection: 'row'
 	},
-	linkBlock: {
+	addBlock: {
 		marginTop: '15@vs'
 	}
 })

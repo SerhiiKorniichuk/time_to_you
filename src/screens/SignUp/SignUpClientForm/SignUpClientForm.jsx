@@ -5,7 +5,7 @@ import { Input } from '../../../components/Input/Input'
 import { Select } from '../../../components/Select/Select'
 import { PhoneInput } from '../../../components/PhoneInput/PhoneInput'
 import { HeaderBlock } from '../../Authorization/HeaderBlock/HeaderBlock'
-import { AuthAddBlockWithLink } from '../../Authorization/AuthAddBlockWithLink/AuthAddBlockWithLink'
+import { AddBlockWithActionText } from '../../Authorization/AddBlockWithActionText/AddBlockWithActionText'
 import { styles as stylesAuthorization } from './../../Authorization/stylesAuthorization'
 import { styles } from './stylesSignUpClientForm'
 
@@ -44,8 +44,6 @@ export const SignUpClientForm = (props) => {
 				/>
 				<PhoneInput
 					label='Phone number'
-					countryCode='DK'
-					callingCode='45'
 					onChange={onChange}
 				/>
 				<Input
@@ -56,11 +54,12 @@ export const SignUpClientForm = (props) => {
 				/>
 			</View>
 			<View style={styles.buttonGroup}>
-				<MainButton type='primary' text='Continue' onPress={onSubmit} />
+				<MainButton type='primary' text='Continue' onPress={onSubmit}/>
 			</View>
-			<AuthAddBlockWithLink
+			<AddBlockWithActionText
+				type='link'
 				mainText='Already have an account?'
-				linkText='Sign in'
+				actionText='Sign in'
 				link='/auth/login'
 			/>
 		</>

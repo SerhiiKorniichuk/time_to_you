@@ -11,24 +11,12 @@ export const SignUp = () => {
 
 	const changeSignUpStage = (stageName) => setStageType(stageName)
 
-	const getChooseTypeScreen = () => (
-		<View style={stylesAuthorization.block}>
-			<SignUpChooseType changeSignUpStage={changeSignUpStage}/>
-		</View>
-	)
-
-	const getClientFormScreen = () => (
-		<ScrollView>
+	return (
+		<ScrollView contentContainerStyle={{flexGrow: 1}}>
 			<View style={stylesAuthorization.block}>
-				<SignUpClientForm changeSignUpStage={changeSignUpStage}/>
+				{stageType === 'chooseType' && <SignUpChooseType changeSignUpStage={changeSignUpStage}/>}
+				{stageType === 'clientForm' && <SignUpClientForm changeSignUpStage={changeSignUpStage}/>}
 			</View>
 		</ScrollView>
-	)
-
-	return (
-		<>
-			{stageType === 'chooseType' && getChooseTypeScreen()}
-			{stageType === 'clientForm' && getClientFormScreen()}
-		</>
 	)
 }

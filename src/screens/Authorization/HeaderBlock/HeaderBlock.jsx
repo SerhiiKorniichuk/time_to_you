@@ -5,11 +5,11 @@ import { ArrowLeftOutline } from '../../../assets/icons/ArrowLeftOutline'
 import { styles } from './stylesHeaderBlock'
 
 
-export const HeaderBlock = ({ title, addText, withButton, onPress, style}) => {
+export const HeaderBlock = ({title, addText, withButton, onPress, containerStyle, headerStyle, addTextStyle}) => {
 
 	const getButton = () => {
 		return (
-			<TouchableWithoutFeedback onPress={onPress}>
+			<TouchableWithoutFeedback onPress={onPress} accessibilityRole='button'>
 				<View style={styles.headerButton}>
 					<ArrowLeftOutline
 						width={styles.arrow.width}
@@ -22,12 +22,12 @@ export const HeaderBlock = ({ title, addText, withButton, onPress, style}) => {
 	}
 
 	return (
-		<View style={style}>
-			<View style={styles.headerBlock}>
+		<View style={containerStyle}>
+			<View style={[styles.headerBlock, headerStyle]}>
 				{withButton && getButton()}
 				<Text style={styles.headerTitle}>{title}</Text>
 			</View>
-			{addText && <Text style={styles.addText}>{addText}</Text>}
+			{addText && <Text style={[styles.addText, addTextStyle]}>{addText}</Text>}
 		</View>
 	)
 }
@@ -38,5 +38,7 @@ HeaderBlock.propsTypes = {
 	addText: PropTypes.string,
 	withButton: PropTypes.bool,
 	onPress: PropTypes.func,
-	style: PropTypes.object
+	containerStyle: PropTypes.object,
+	headerStyle: PropTypes.object,
+	addTextStyle: PropTypes.object
 }

@@ -8,7 +8,7 @@ export const styles = ScaledSheet.create({
 	},
 	title: {
 		paddingTop: '48@msr',
-		width: '181@msr',
+		width: '181@s',
 		fontSize: '32@msr',
 		fontFamily: 'Prata',
 		textAlign: 'center'

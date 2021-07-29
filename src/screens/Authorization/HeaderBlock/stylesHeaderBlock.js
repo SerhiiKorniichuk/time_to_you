@@ -9,11 +9,12 @@ export const styles = ScaledSheet.create({
 		alignItems: 'center',
 	},
 	headerButton: {
+		zIndex: 1,
 		position: 'absolute',
-		top: '5@vs',
-		left: 0,
-		width: '33@msr',
-		height: '33@msr',
+		top: '2@vs',
+		left: '8@vs',
+		width: '22@msr',
+		height: '100%',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
@@ -22,8 +23,8 @@ export const styles = ScaledSheet.create({
 		height: '14@vs'
 	},
 	headerTitle: {
-		paddingHorizontal: '66@s',
-		width: '100%',
+		paddingHorizontal: '44@s',
+		flex: 1,
 		fontSize: '24@vs',
 		fontFamily: 'Prata',
 		textAlign: 'center'

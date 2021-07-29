@@ -14,7 +14,8 @@ export const styles = ScaledSheet.create({
 		marginTop: '153@vs',
 		paddingVertical: '32@mvs',
 		paddingHorizontal: '28@msr',
-		borderRadius: '20@msr',
+		borderTopLeftRadius: '20@msr',
+		borderTopRightRadius: '20@msr',
 		backgroundColor: '#FBF9F9',
 	},
 	formBlock: {

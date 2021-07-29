@@ -12,7 +12,7 @@ export const styles = ScaledSheet.create({
 		fontSize: '14@vs'
 	},
 	additionLink: {
-		marginLeft: '3@s',
+		marginHorizontal: '3@s',
 		color: '#FE6F61',
 		fontFamily: 'Poppins-SemiBold',
 		fontSize: '14@vs',
