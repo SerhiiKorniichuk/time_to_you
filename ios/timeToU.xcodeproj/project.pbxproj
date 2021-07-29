@@ -32,6 +32,13 @@
 		E5918B4184B5421FB9D60159 /* sign_up_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D20806723C3465BBD34F63F /* sign_up_bg.jpg */; };
 		9D630EBB4CFA441E9569B2DF /* sign_up_bg.svg in Resources */ = {isa = PBXBuildFile; fileRef = 10D4B4C42D11421D8942BE41 /* sign_up_bg.svg */; };
 		F011936551964A3883D359B8 /* Questrial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6345D4648745450A8E6FBAC6 /* Questrial.ttf */; };
+		1460EF503A3B4D6D90DB0796 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F26654C2587148ABBA993D0C /* bg.png */; };
+		6F2711C3133A46E192C05DD4 /* business_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B0A2FD7CB6498B8817A989 /* business_1.png */; };
+		F91C9D33C3A34400AA2B4F95 /* business_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0827CFA06463D812E6078 /* business_2.png */; };
+		04ED7F485E944CB28BA2220F /* business_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A9F301C3AB924D0C84A9EF77 /* business_3.png */; };
+		0C88E1BFB06D4B12A9D70596 /* customer_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EFDECBF1355441F87A6D5F6 /* customer_1.png */; };
+		BCA83D8A2B2E4E3DB029BB1A /* customer_2.png in Resources */ = {isa = PBXBuildFile; fileRef = E701435531734AC390C60615 /* customer_2.png */; };
+		2217A8B67EF74041A4F784E4 /* customer_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 52607EB5F2694AB6B1D26DB4 /* customer_3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +83,13 @@
 		8D20806723C3465BBD34F63F /* sign_up_bg.jpg */ = {isa = PBXFileReference; name = "sign_up_bg.jpg"; path = "../src/assets/images/SignUp/sign_up_bg.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		10D4B4C42D11421D8942BE41 /* sign_up_bg.svg */ = {isa = PBXFileReference; name = "sign_up_bg.svg"; path = "../src/assets/images/SignUp/sign_up_bg.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		6345D4648745450A8E6FBAC6 /* Questrial.ttf */ = {isa = PBXFileReference; name = "Questrial.ttf"; path = "../src/assets/fonts/Questrial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F26654C2587148ABBA993D0C /* bg.png */ = {isa = PBXFileReference; name = "bg.png"; path = "../src/assets/images/Onboarding/bg.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		23B0A2FD7CB6498B8817A989 /* business_1.png */ = {isa = PBXFileReference; name = "business_1.png"; path = "../src/assets/images/Onboarding/business_1.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4AA0827CFA06463D812E6078 /* business_2.png */ = {isa = PBXFileReference; name = "business_2.png"; path = "../src/assets/images/Onboarding/business_2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A9F301C3AB924D0C84A9EF77 /* business_3.png */ = {isa = PBXFileReference; name = "business_3.png"; path = "../src/assets/images/Onboarding/business_3.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0EFDECBF1355441F87A6D5F6 /* customer_1.png */ = {isa = PBXFileReference; name = "customer_1.png"; path = "../src/assets/images/Onboarding/customer_1.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E701435531734AC390C60615 /* customer_2.png */ = {isa = PBXFileReference; name = "customer_2.png"; path = "../src/assets/images/Onboarding/customer_2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		52607EB5F2694AB6B1D26DB4 /* customer_3.png */ = {isa = PBXFileReference; name = "customer_3.png"; path = "../src/assets/images/Onboarding/customer_3.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +202,13 @@
 				8D20806723C3465BBD34F63F /* sign_up_bg.jpg */,
 				10D4B4C42D11421D8942BE41 /* sign_up_bg.svg */,
 				6345D4648745450A8E6FBAC6 /* Questrial.ttf */,
+				F26654C2587148ABBA993D0C /* bg.png */,
+				23B0A2FD7CB6498B8817A989 /* business_1.png */,
+				4AA0827CFA06463D812E6078 /* business_2.png */,
+				A9F301C3AB924D0C84A9EF77 /* business_3.png */,
+				0EFDECBF1355441F87A6D5F6 /* customer_1.png */,
+				E701435531734AC390C60615 /* customer_2.png */,
+				52607EB5F2694AB6B1D26DB4 /* customer_3.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -303,6 +324,13 @@
 				E5918B4184B5421FB9D60159 /* sign_up_bg.jpg in Resources */,
 				9D630EBB4CFA441E9569B2DF /* sign_up_bg.svg in Resources */,
 				F011936551964A3883D359B8 /* Questrial.ttf in Resources */,
+				1460EF503A3B4D6D90DB0796 /* bg.png in Resources */,
+				6F2711C3133A46E192C05DD4 /* business_1.png in Resources */,
+				F91C9D33C3A34400AA2B4F95 /* business_2.png in Resources */,
+				04ED7F485E944CB28BA2220F /* business_3.png in Resources */,
+				0C88E1BFB06D4B12A9D70596 /* customer_1.png in Resources */,
+				BCA83D8A2B2E4E3DB029BB1A /* customer_2.png in Resources */,
+				2217A8B67EF74041A4F784E4 /* customer_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
