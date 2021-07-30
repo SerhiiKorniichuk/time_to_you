@@ -64,13 +64,13 @@ export const MainButton = (props) => {
 	)
 
 	const getLeftIcon = () => (
-		<View style={[styles.leftIcon, leftIconContainerStyle]}>
+		<View style={[styles.icon, styles.leftIcon, leftIconContainerStyle]}>
 			<LeftIcon {...leftIconProps}/>
 		</View>
 	)
 
 	const getRightIcon = () => (
-		<View style={[styles.rightIcon, rightIconContainerStyle]}>
+		<View style={[styles.icon, styles.rightIcon, rightIconContainerStyle]}>
 			<RightIcon {...rightIconProps}/>
 		</View>
 	)

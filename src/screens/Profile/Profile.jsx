@@ -7,6 +7,7 @@ import { HeaderWithNavigation } from '../../components/HeaderWithNavigation/Head
 import { Input } from '../../components/Input/Input'
 import { PhoneInput } from '../../components/PhoneInput/PhoneInput'
 import { Select } from '../../components/Select/Select'
+import { verticalScale } from 'react-native-size-matters'
 import { styles as stylesInput } from '../../components/Input/stylesInput'
 import { styles } from './stylesProfile'
 
@@ -94,7 +95,12 @@ export const Profile = () => {
 							type='outline'
 							text='Log out'
 							LeftIcon={LogOutCircle}
-							leftIconProps={{fillColor: '#FE6F61'}}
+							leftIconContainerStyle={{paddingBottom: verticalScale(3)}}
+							leftIconProps={{
+								fillColor: '#FE6F61',
+								width: verticalScale(25),
+								height: verticalScale(25)
+							}}
 							onPress={() => {Alert.alert('log out')}}
 						/>
 					</View>

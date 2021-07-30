@@ -15,14 +15,12 @@ export const styles = ScaledSheet.create({
 		width: '110@msr',
 		height: '110@msr',
 		borderRadius: 1000,
-		backgroundColor: '#eaeaea'
+		backgroundColor: '#EAEAEA'
 	},
 	buttonBlock: {
 		alignItems: 'center'
 	},
 	editButton: {
-		paddingTop: '9@vs',
-		paddingBottom: '8@vs',
 		width: '118@ms',
 		height: '40@vs'
 	},
