@@ -5,7 +5,7 @@ export const styles = ScaledSheet.create({
 	body: {
 		paddingTop: '15@vs',
 		paddingBottom: '7@vs',
-		paddingHorizontal: '45@s',
+		paddingHorizontal: '25@s',
 		width: '100%',
 		height: '55@vs',
 		borderWidth: 1,
@@ -20,16 +20,20 @@ export const styles = ScaledSheet.create({
 		elevation: '10@msr'
 	},
 	bodyVanilla: {
-		borderColor: '#FBF9F9',
-		backgroundColor: '#FBF9F9'
+		borderColor: 'transparent',
+		backgroundColor: 'transparent'
 	},
 	bodyOutline: {
 		borderColor: '#FE6F61',
-		backgroundColor: '#FBF9F9'
+		backgroundColor: 'transparent'
 	},
 	bodyPrimary: {
 		borderStyle: 'solid',
 		borderColor: '#FBF9F9'
+	},
+	innerContainer:{
+		flexDirection: 'row',
+		justifyContent: 'center'
 	},
 	text: {
 		fontFamily: 'Poppins-Medium',
@@ -44,5 +48,11 @@ export const styles = ScaledSheet.create({
 	},
 	textPrimary: {
 		color: '#FFFFFF'
+	},
+	leftIcon: {
+		marginRight: '5@s'
+	},
+	rightIcon: {
+		marginLeft: '5@s'
 	}
 })

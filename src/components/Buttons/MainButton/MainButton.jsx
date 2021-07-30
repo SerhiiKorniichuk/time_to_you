@@ -8,8 +8,15 @@ import { styles } from './stylesMainButton'
 
 export const MainButton = (props) => {
 
-	const [bodyStyle, setBodyStyle] = useState(styles.bodyVanilla)
-	const [textStyle, setTextStyle] = useState(styles.textVanilla)
+	const {
+		link, text, textStyle, containerStyle,
+		LeftIcon, RightIcon,
+		leftIconContainerStyle, rightIconContainerStyle,
+		leftIconProps, rightIconProps, onPress
+	} = props
+
+	const [bodyLocalStyle, setBodyLocalStyle] = useState(styles.bodyVanilla)
+	const [textLocalStyle, setTextLocalStyle] = useState(styles.textVanilla)
 
 	useEffect(() => {
 		getStyles()
@@ -18,58 +25,85 @@ export const MainButton = (props) => {
 	const getStyles = () => {
 		switch (props.type) {
 			case 'primary':
-				setBodyStyle(styles.bodyPrimary)
-				setTextStyle(styles.textPrimary)
+				setBodyLocalStyle(styles.bodyPrimary)
+				setTextLocalStyle(styles.textPrimary)
 				break
 			case 'outline':
-				setBodyStyle(styles.bodyOutline)
-				setTextStyle(styles.textOutline)
+				setBodyLocalStyle(styles.bodyOutline)
+				setTextLocalStyle(styles.textOutline)
 				break
 			default:
 				break
 		}
 	}
 
-	const getInnerText = () => {
+	const getButton = () => {
 		if (props.type === 'primary') {
 			return (
 				<LinearGradient
 					colors={['#FF9677', '#F57D72']}
-					style={[styles.body, bodyStyle, props.style]}
+					style={[styles.body, bodyLocalStyle, containerStyle]}
 				>
-					<Text style={[styles.text, textStyle]}>{props.text}</Text>
+					{getButtonInner()}
 				</LinearGradient>
 			)
 		}
 		return (
-			<View style={[styles.body, bodyStyle, props.style]}>
-				<Text style={[styles.text, textStyle]}>{props.text}</Text>
+			<View style={[styles.body, bodyLocalStyle, containerStyle]}>
+				{getButtonInner()}
 			</View>
 		)
 	}
 
-	const onPress = () => props.onPress()
+	const getButtonInner = () => (
+		<View style={styles.innerContainer}>
+			{LeftIcon && getLeftIcon()}
+			<Text style={[styles.text, textLocalStyle, textStyle]}>{text}</Text>
+			{RightIcon && getRightIcon()}
+		</View>
+	)
 
-	if (props.link) {
+	const getLeftIcon = () => (
+		<View style={[styles.leftIcon, leftIconContainerStyle]}>
+			<LeftIcon {...leftIconProps}/>
+		</View>
+	)
+
+	const getRightIcon = () => (
+		<View style={[styles.rightIcon, rightIconContainerStyle]}>
+			<RightIcon {...rightIconProps}/>
+		</View>
+	)
+
+	const onButtonPress = () => onPress()
+
+	if (link) {
 		return (
-			<Link to={props.link} underlayColor='none'>
-				{getInnerText()}
+			<Link to={link} underlayColor='none'>
+				{getButton()}
 			</Link>
 		)
 	}
 
 	return (
-		<TouchableWithoutFeedback onPress={onPress}>
-			{getInnerText()}
-		</TouchableWithoutFeedback >
+		<TouchableWithoutFeedback onPress={onButtonPress}>
+			{getButton()}
+		</TouchableWithoutFeedback>
 	)
 }
 
 
 MainButton.propTypes = {
-	style: PropTypes.object,
 	type: PropTypes.oneOf(['primary', 'outline']),
-	text: PropTypes.string,
 	link: PropTypes.string,
+	text: PropTypes.string,
+	textStyle: PropTypes.object,
+	containerStyle: PropTypes.object,
+	LeftIcon: PropTypes.func,
+	RightIcon: PropTypes.func,
+	leftIconContainerStyle: PropTypes.object,
+	rightIconContainerStyle: PropTypes.object,
+	leftIconProps: PropTypes.object,
+	rightIconProps: PropTypes.object,
 	onPress: PropTypes.func
 }

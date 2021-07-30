@@ -14,8 +14,8 @@ export const SignUpChooseType = (props) => {
 			<Text style={styles.title}>Welcome to&nbsp;TimetoU!</Text>
 			<Text style={styles.subtitle}>How you will use our application?</Text>
 			<View style={styles.buttonGroup}>
-				<MainButton style={styles.button} type='outline' text='I am client' onPress={onPress}/>
-				<MainButton style={styles.button} link='/login' type='primary' text='I am business'/>
+				<MainButton containerStyle={styles.button} type='outline' text='I am client' onPress={onPress}/>
+				<MainButton containerStyle={styles.button} link='/login' type='primary' text='I am business'/>
 			</View>
 			<AddBlockWithActionText
 				type='link'

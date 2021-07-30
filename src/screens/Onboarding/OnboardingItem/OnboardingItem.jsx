@@ -35,7 +35,7 @@ const OnboardingItem = ({ data }) => {
 							type="primary"
 							text="Get started"
 							link="/screens"
-							style={styles.btn}
+							containerStyle={styles.btn}
 						/>
 					)}
 				</View>
