@@ -3,7 +3,7 @@ import { Alert, View } from 'react-native'
 import PropTypes from 'prop-types'
 import { MainButton } from '../../../../components/Buttons/MainButton/MainButton'
 import { Input } from '../../../../components/Input/Input'
-import { AddBlockWithActionText } from '../../../Authorization/AddBlockWithActionText/AddBlockWithActionText'
+import { AddBlockWithActionText } from '../../../../components/AddBlockWithActionText/AddBlockWithActionText'
 import { HeaderBlock } from '../../../Authorization/HeaderBlock/HeaderBlock'
 import { styles as stylesAuthorization } from '../../../Authorization/stylesAuthorization'
 import { styles as stylesPasswordRecovery } from '../stylesPasswordRecovery'
@@ -44,7 +44,7 @@ export const TypeRecoveryCode = ({changePasswordRecoveryStage}) => {
 					actionText='Send Again'
 					onPress={() => {Alert.alert('Send Again')}}
 					containerStyle={styles.addBlockContainer}
-					textStyle={styles.addBlockText}
+					mainTextStyle={styles.addBlockText}
 					actionTextStyle={styles.addBlockActionText}
 				/>
 			</View>

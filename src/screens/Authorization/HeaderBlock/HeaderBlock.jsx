@@ -23,10 +23,12 @@ export const HeaderBlock = ({title, addText, withButton, onPress, containerStyle
 
 	return (
 		<View style={containerStyle}>
-			<View style={[styles.headerBlock, headerStyle]}>
-				{withButton && getButton()}
-				<Text style={styles.headerTitle}>{title}</Text>
-			</View>
+			{title &&
+				<View style={[styles.headerBlock, headerStyle]}>
+					{withButton && getButton()}
+					<Text style={styles.headerTitle}>{title}</Text>
+				</View>
+			}
 			{addText && <Text style={[styles.addText, addTextStyle]}>{addText}</Text>}
 		</View>
 	)
@@ -34,7 +36,7 @@ export const HeaderBlock = ({title, addText, withButton, onPress, containerStyle
 
 
 HeaderBlock.propsTypes = {
-	title: PropTypes.string.isRequired,
+	title: PropTypes.string,
 	addText: PropTypes.string,
 	withButton: PropTypes.bool,
 	onPress: PropTypes.func,

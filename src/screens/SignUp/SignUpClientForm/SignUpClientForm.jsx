@@ -5,7 +5,7 @@ import { Input } from '../../../components/Input/Input'
 import { Select } from '../../../components/Select/Select'
 import { PhoneInput } from '../../../components/PhoneInput/PhoneInput'
 import { HeaderBlock } from '../../Authorization/HeaderBlock/HeaderBlock'
-import { AddBlockWithActionText } from '../../Authorization/AddBlockWithActionText/AddBlockWithActionText'
+import { AddBlockWithActionText } from '../../../components/AddBlockWithActionText/AddBlockWithActionText'
 import { styles as stylesAuthorization } from './../../Authorization/stylesAuthorization'
 import { styles } from './stylesSignUpClientForm'
 

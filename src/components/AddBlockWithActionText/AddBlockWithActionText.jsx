@@ -7,7 +7,7 @@ import { styles } from './stylesAddBlockWithActionText'
 
 export const AddBlockWithActionText = (props) => {
 
-	const {mainText, actionText, type, link, onPress, containerStyle, textStyle, actionTextStyle} = props
+	const {mainText, actionText, type, link, onPress, containerStyle, mainTextStyle, actionTextStyle} = props
 
 	const getLink = () => {
 		return (
@@ -27,7 +27,7 @@ export const AddBlockWithActionText = (props) => {
 
 	return (
 		<View style={[styles.additionBlock, containerStyle]}>
-			<Text style={[styles.additionText, textStyle]}>{mainText}</Text>
+			<Text style={[styles.additionText, mainTextStyle]}>{mainText}</Text>
 			{type === 'link' && getLink()}
 			{type === 'button' && getButton()}
 		</View>
@@ -42,7 +42,7 @@ AddBlockWithActionText.propsTypes = {
 	link: PropTypes.string,
 	onPress: PropTypes.func,
 	containerStyle: PropTypes.object,
-	textStyle: PropTypes.object,
+	mainTextStyle: PropTypes.object,
 	linkStyle: PropTypes.object
 }
 

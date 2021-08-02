@@ -6,7 +6,7 @@ import { Input } from '../../../components/Input/Input'
 import { SocialMediaButton } from '../../../components/Buttons/SocialMediaButton/SocialMediaButton'
 import { PhoneInput } from '../../../components/PhoneInput/PhoneInput'
 import { HeaderBlock } from '../../Authorization/HeaderBlock/HeaderBlock'
-import { AddBlockWithActionText } from '../../Authorization/AddBlockWithActionText/AddBlockWithActionText'
+import { AddBlockWithActionText } from '../../../components/AddBlockWithActionText/AddBlockWithActionText'
 import { styles as stylesAuthorization } from './../../Authorization/stylesAuthorization'
 import { styles } from './stylesLoginForm'
 
@@ -21,7 +21,7 @@ export const LoginForm = ({changeLoginStage}) => {
 		onSubmit: data => console.log(data)
 	})
 
-	const { values, handleChange, handleSubmit, setValues } = formik
+	const { values, handleChange, setValues } = formik
 
 	const goToRecoveryScreen = () => changeLoginStage('recovery')
 

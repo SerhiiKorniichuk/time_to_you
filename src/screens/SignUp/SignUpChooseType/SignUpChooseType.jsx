@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import { MainButton } from '../../../components/Buttons/MainButton/MainButton'
-import { AddBlockWithActionText } from '../../Authorization/AddBlockWithActionText/AddBlockWithActionText'
+import { AddBlockWithActionText } from '../../../components/AddBlockWithActionText/AddBlockWithActionText'
 import { styles } from './stylesSignUpChooseType'
 
 

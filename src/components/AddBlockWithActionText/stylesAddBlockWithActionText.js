@@ -9,13 +9,13 @@ export const styles = ScaledSheet.create({
 	additionText: {
 		color: '#323131',
 		fontFamily: 'Poppins',
-		fontSize: '14@vs'
+		fontSize: '14@msr'
 	},
 	additionLink: {
 		marginHorizontal: '3@s',
 		color: '#FE6F61',
-		fontFamily: 'Poppins-SemiBold',
-		fontSize: '14@vs',
+		fontFamily: 'Poppins-Medium',
+		fontSize: '14@msr',
 		textDecorationLine: 'underline'
 	}
 })
