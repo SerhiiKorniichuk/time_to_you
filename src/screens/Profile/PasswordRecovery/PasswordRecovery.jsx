@@ -17,7 +17,12 @@ export const PasswordRecovery = (props) => {
 					changeRecoveryStage={changeRecoveryStage}
 				/>
 			}
-			{stageType === 'typeRecoveryCode' && <TypeRecoveryCode changeRecoveryStage={changeRecoveryStage}/>}
+			{stageType === 'typeRecoveryCode' &&
+				<TypeRecoveryCode
+					changeProfileStage={props.changeProfileStage}
+					changeRecoveryStage={changeRecoveryStage}
+				/>
+			}
 		</>
 	)
 }

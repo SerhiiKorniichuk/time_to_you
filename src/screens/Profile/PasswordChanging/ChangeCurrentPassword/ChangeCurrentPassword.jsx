@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Alert, Text, TouchableWithoutFeedback, View } from 'react-native'
-import { ArrowLeftOutline } from '../../../assets/icons/ArrowLeftOutline'
-import { MainButton } from '../../../components/Buttons/MainButton/MainButton'
-import { HeaderWithNavigation } from '../../../components/HeaderWithNavigation/HeaderWithNavigation'
-import { Input } from '../../../components/Input/Input'
-import { styles } from './stylesChangePassword'
+import { ArrowLeftOutline } from '../../../../assets/icons/ArrowLeftOutline'
+import { MainButton } from '../../../../components/Buttons/MainButton/MainButton'
+import { HeaderWithNavigation } from '../../../../components/HeaderWithNavigation/HeaderWithNavigation'
+import { Input } from '../../../../components/Input/Input'
+import { styles as stylesPasswordChanging } from '../stylesPasswordChanging'
 
 
-export const ChangePassword = (props) => {
+export const ChangeCurrentPassword = (props) => {
 
 	const [currentPassword, setCurrentPassword] = useState('')
 	const [newPassword, setNewPassword] = useState('')
@@ -21,7 +21,7 @@ export const ChangePassword = (props) => {
 				leftButtonIconProps={{fillColor: '#323131'}}
 				onPressLeftButton={() => {props.changeProfileStage('profile')}}
 			/>
-			<View style={styles.formBlock}>
+			<View style={stylesPasswordChanging.formBlock}>
 				<Input
 					label='Current Password'
 					type='password'
@@ -41,16 +41,16 @@ export const ChangePassword = (props) => {
 					onChange={setDuplicatedNewPassword}
 				/>
 			</View>
-			<View style={styles.buttonBlock}>
+			<View style={stylesPasswordChanging.buttonBlock}>
 				<MainButton
 					type='primary'
 					text='Update Password'
 					onPress={() => {Alert.alert('update password')}}
 				/>
 			</View>
-			<View style={styles.actionBlock}>
+			<View style={stylesPasswordChanging.actionBlock}>
 				<TouchableWithoutFeedback onPress={() => props.changeProfileStage('forgotPassword')}>
-					<Text style={styles.actionText}>Forgot Password?</Text>
+					<Text style={stylesPasswordChanging.actionText}>Forgot Password?</Text>
 				</TouchableWithoutFeedback>
 			</View>
 		</>

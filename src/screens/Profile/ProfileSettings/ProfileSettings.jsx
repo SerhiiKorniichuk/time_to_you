@@ -86,7 +86,7 @@ export const ProfileSettings = (props) => {
 						<MainButton
 							type='primary'
 							text='Change Password'
-							onPress={() => {props.changeProfileStage('changePassword')}}
+							onPress={() => {props.changeProfileStage('changeCurrentPassword')}}
 						/>
 					</View>
 					<View style={styles.logOutButtonContainer}>

@@ -37,7 +37,7 @@ export const TypeRecoveryCode = (props) => {
 				<MainButton
 					type='primary'
 					text='Reset'
-					onPress={() => {Alert.alert('reset')}}
+					onPress={() => {props.changeProfileStage('addNewPassword')}}
 				/>
 			</View>
 			<View style={styles.addBlock}>
