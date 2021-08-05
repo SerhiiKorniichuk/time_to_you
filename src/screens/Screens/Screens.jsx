@@ -13,6 +13,11 @@ const DATA = [
 		id: 2,
 		link: '/onboarding',
 		title: 'Onboarding'
+	},
+	{
+		id: 3,
+		link: '/home',
+		title: 'Home Page'
 	}
 ]
 

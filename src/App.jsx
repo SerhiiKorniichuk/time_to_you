@@ -9,7 +9,7 @@ import { styles } from './stylesApp'
 const App = () => {
 	return (
 		<NativeRouter>
-			<View style={ styles.container }>
+			<View style={styles.container}>
 				<GuestRoutes/>
 				{/*<PrivateRoutes/>*/}
 			</View>
